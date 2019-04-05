@@ -15,7 +15,7 @@ class Primer extends CI_Controller {
 	// List all your items
 	public function index()
 	{
-		$this->load->view('page_header');
+		$this->load->view('template/page_header');
 		$this->load->view('blog_profil');
 	}
 
