@@ -174,6 +174,7 @@
                                     <a href="" class="text-muted" style="text-decoration:none;"> <ion-icon name="add-circle" size="large"></ion-icon> </a>
                                 </div>
                             </div>
+                        </li>
                         <li class="list-group-item" style="background-color:transparent; border-right:0; border-left : 0; border-color: rgb(139, 153, 173)">
                             <div class="d-flex">
                                 <img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="45px" height="45px">
@@ -187,9 +188,24 @@
                                     <a href="" class="text-muted" style="text-decoration:none;"> <ion-icon name="add-circle" size="large"></ion-icon> </a>
                                 </div>
                             </div>
+                        </li>
+                        <li class="list-group-item" style="background-color:transparent; border-right:0; border-left : 0; border-color: rgb(139, 153, 173)">
+                            <div class="d-flex">
+                                <img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="45px" height="45px">
+                                
+                                <div class="ml-2">
+                                    <b>pratamays</b>
+                                    <p class="text-muted" style="margin-bottom : 0;"><small>Tama</small></p>
+                                </div>
+
+                                <div class="ml-auto mt-2">
+                                    <a href="" class="text-muted" style="text-decoration:none;"> <ion-icon name="add-circle" size="large"></ion-icon> </a>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
 
-                    <a href="#" class="mt-1 link text-muted" style="text-decoration: none"><small>Mass post editor</small></a>
+                    <a href="#" class="mt-1" style="text-decoration: none"><small>Explore all of tumbler</small></a>
                 </div>
 
                 <div>

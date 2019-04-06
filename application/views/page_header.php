@@ -62,41 +62,19 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <!-- ratanya kepotong -->
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <ion-icon name="person" size="large"></ion-icon>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <div class="dropdown-header">
-                                <h6><small>ACCOUNT</small></h6>
-                                <a href="" class="text-muted" style="text-decoration: none"><small>Log out</small></a>
+                            <div class="dropdowrn-header">
+                                <h6>ACCOUNT</h6>
+                                <a href=""><small>Log out</small></a>
                             </div>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#"><ion-icon name="heart"></ion-icon> Likes</a>
-                            <a class="dropdown-item" href="#"><ion-icon name="settings"></ion-icon> Settings</a>
-                            <a class="dropdown-item" href="#"><ion-icon name="help-circle"></ion-icon> Help</a>
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
                             <div class="dropdown-divider"></div>
-                            <div class="dropdown-header">
-                                <h6><small>Pic - Q</small></h6>
-                                <a href="" class="text-muted" style="text-decoration: none"><small>+ New</small></a>
-                            </div>
-                            <div class="dropdown-divider"></div>
-                            <div class="d-flex ml-3">
-                                <a href="#fake">
-                                    <img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="30px" height="30px">
-                                </a>
-                                <div class="ml-2">
-                                    <small>
-                                        <a href="#" style="color:black; text-decoration: none;"><b>pratamays</b></a><br>
-                                        <p class="text-muted">Tama</p>
-                                    </small>
-                                </div>
-                            </div>
-                            <a class="dropdown-item" href="#"><small>Post</small></a>
-                            <a class="dropdown-item" href="#"><small>Followers</small></a>
-                            <a class="dropdown-item" href="#"><small>Activity</small></a>
-                            <a class="dropdown-item" href="#"><small>Review flagged posts</small></a>
-                            <a class="dropdown-item" href="#"><small>Edit appearance</small></a>
+                            <a class="dropdown-item" href="#">Something else here</a>
                         </div>
                     </li>
                     <li class="nav-item">
