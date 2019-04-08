@@ -1,34 +1,48 @@
 <!-- Modal post-->
     <div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document" width="100%" style="max-width:unset;">
+        <div id="modall" class="modal-dialog modal-dialog-centered" role="document" width="100%" style="max-width:unset;" data-backdrop="static" data-keyboard="false">
             <ul class="list-inline mx-auto justify-content-center">
-                <li class="list-inline-item">
-                    <img class="rounded-circle" src="<?php echo base_url('assets/aa_post.png');?>" alt="" width="100px" height="100px">
-                    <p class="font-weight-lighter mt-1">Text</p>
+                <li class="text-center list-inline-item">
+                    <a href="" class="hvr-float" data-toggle="modal" style="color:white; text-decoration: none;" data-target="#modalText">
+                        <img class="rounded-circle" src="<?php echo base_url('assets/aa_post.png');?>" alt="" width="100px" height="100px">
+                        <p class="font-weight-lighter mt-1">Text</p>
+                    </a>
                 </li>
-                <li class="list-inline-item ml-3 mt-3">
-                    <img class="rounded-circle" src="<?php echo base_url(); ?>assets/cam_post.png" alt="" width="100px" height="100px">
-                    <p class="font-weight-lighter mt-1">Photo</p>
+                <li class="text-center list-inline-item ml-3 mt-3">
+                    <a href="" class="hvr-float" data-toggle="modal" style="color:white; text-decoration: none;" data-target="#modalFoto">
+                        <img class="rounded-circle" src="<?php echo base_url(); ?>assets/cam_post.png" alt="" width="100px" height="100px">
+                        <p class="font-weight-lighter mt-1">Photo</p>
+                    </a>
                 </li>
-                <li class="list-inline-item ml-3 mt-3">
-                    <img class="rounded-circle" src="<?php echo base_url(); ?>assets/quote_post.png" alt="" width="100px" height="100px">
-                    <p class="font-weight-lighter mt-1">Quote</p>
+                <li class="text-center list-inline-item ml-3 mt-3">
+                    <a href="" class="hvr-float" data-toggle="modal" style="color:white; text-decoration: none;" data-target="#modalQuote">
+                        <img class="rounded-circle" src="<?php echo base_url(); ?>assets/quote_post.png" alt="" width="100px" height="100px">
+                        <p class="font-weight-lighter mt-1">Quote</p>
+                    </a>
                 </li>
-                <li class="list-inline-item ml-3 mt-3">
-                    <img class="rounded-circle" src="<?php echo base_url(); ?>assets/link_post.png" alt="" width="100px" height="100px">
-                    <p class="font-weight-lighter mt-1">Link</p>
+                <li class="text-center list-inline-item ml-3 mt-3">
+                    <a href="" class="hvr-float" data-toggle="modal" style="color:white; text-decoration: none;" data-target="#modalLink">
+                        <img class="rounded-circle" src="<?php echo base_url(); ?>assets/link_post.png" alt="" width="100px" height="100px">
+                        <p class="font-weight-lighter mt-1">Link</p>
+                    </a>
                 </li>
-                <li class="list-inline-item ml-3 mt-3">
-                    <img class="rounded-circle" src="<?php echo base_url(); ?>assets/hi_post.png" alt="" width="100px" height="100px">
-                    <p class="font-weight-lighter mt-1">Chat</p>
+                <li class="text-center list-inline-item ml-3 mt-3">
+                    <a href="" class="hvr-float" data-toggle="modal" style="color:white; text-decoration: none;" data-target="#modalChat">
+                        <img class="rounded-circle" src="<?php echo base_url(); ?>assets/hi_post.png" alt="" width="100px" height="100px">
+                        <p class="font-weight-lighter mt-1">Chat</p>
+                    </a>
                 </li>
-                <li class="list-inline-item ml-3 mt-3">
-                    <img class="rounded-circle" src="<?php echo base_url(); ?>assets/headset_post.ico" alt="" width="100px" height="100px">
-                    <p class="font-weight-lighter mt-1">Audio</p>
+                <li class="text-center list-inline-item ml-3 mt-3">
+                    <a href="" class="hvr-float" data-toggle="modal" style="color:white; text-decoration: none;" data-target="#modalChat">
+                        <img class="rounded-circle" src="<?php echo base_url(); ?>assets/headset_post.ico" alt="" width="100px" height="100px">
+                        <p class="font-weight-lighter mt-1">Audio</p>
+                    </a>
                 </li>
-                <li class="list-inline-item ml-3 mt-3">
-                    <img class="rounded-circle" src="<?php echo base_url(); ?>assets/video_post.png" alt="" width="100px" height="100px">
-                    <p class="font-weight-lighter mt-1">Video</p>
+                <li class="text-center list-inline-item ml-3 mt-3">
+                    <a href="" class="hvr-float" data-toggle="modal" style="color:white; text-decoration: none;" data-target="#modalVideo">
+                        <img class="rounded-circle" src="<?php echo base_url(); ?>assets/video_post.png" alt="" width="100px" height="100px">
+                        <p class="font-weight-lighter mt-1">Video</p>
+                    </a>
                 </li>
             </ul>
         </div>
