@@ -11,10 +11,14 @@
     <title>Document</title>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/hover.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/comment.css">
 =======
 >>>>>>> test
+=======
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/hover.css">
+>>>>>>> a
     <style>
         body {
             background-color: #001935;
@@ -25,6 +29,26 @@
             padding: 0.4em 1em;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+/*        .hvr-float {
+              display: inline-block;
+              vertical-align: middle;
+              -webkit-transform: perspective(1px) translateZ(0);
+              transform: perspective(1px) translateZ(0);
+              box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+              -webkit-transition-duration: 0.3s;
+              transition-duration: 0.3s;
+              -webkit-transition-property: transform;
+              transition-property: transform;
+              -webkit-transition-timing-function: ease-out;
+              transition-timing-function: ease-out;
+            }
+        .hvr-float:hover, .hvr-float:focus, .hvr-float:active {
+          -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+        }*/
+>>>>>>> a
 
         #search-field .form-control {
             width: 100%;
@@ -41,12 +65,16 @@
         ul>#modalList {
             z-index: 99999 !important   ;
         }
+<<<<<<< HEAD
 =======
 >>>>>>> test
+=======
+>>>>>>> a
     </style>
 </head>
 
 <body>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <nav id="navv" class="l-header fixed-top navbar navbar-expand-md navbar-dark border border-white border-top-0 border-right-0 border-left-0" style="background-color : #001935;">
         <a class="navbar-brand" href="<?php echo base_url(); ?>">Pic - Q</a>
@@ -54,6 +82,10 @@
     <nav id="navv" class="fixed-top navbar navbar-expand-md navbar-dark border border-white border-top-0 border-right-0 border-left-0" style="background-color : #001935;">
         <a class="navbar-brand" href="#">Pic - Q</a>
 >>>>>>> test
+=======
+    <nav id="navv" class="fixed-top navbar navbar-expand-md navbar-dark border border-white border-top-0 border-right-0 border-left-0" style="background-color : #001935;">
+        <a class="navbar-brand" href="<?php echo base_url(); ?>">Pic - Q</a>
+>>>>>>> a
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -79,8 +111,12 @@
             <div class="float-right">
                 <ul class="navbar-nav active">
                     <li class="nav-item ">
+<<<<<<< HEAD
                         <a class="nav-link" href="#">
 >>>>>>> test
+=======
+                        <a class="nav-link" href="<?php echo base_url(); ?>">
+>>>>>>> a
                             <ion-icon name="home" size="large"></ion-icon>
                         </a>
                     </li>
@@ -143,10 +179,14 @@
                                 <div class="ml-2">
                                     <small>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         <a href="<?php echo base_url(); ?>primer/blogprofil" style="color:black; text-decoration: none;"><b>pratamays</b></a><br>
 =======
                                         <a href="#" style="color:black; text-decoration: none;"><b>pratamays</b></a><br>
 >>>>>>> test
+=======
+                                        <a href="<?php echo base_url(); ?>primer/blogprofil" style="color:black; text-decoration: none;"><b>pratamays</b></a><br>
+>>>>>>> a
                                         <p class="text-muted">Tama</p>
                                     </small>
                                 </div>
