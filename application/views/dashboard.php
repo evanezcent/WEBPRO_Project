@@ -77,12 +77,14 @@
                             <p class="">caption</p>
                         </div>
                         <div class="float-right">
-                            <ul class="list-inline ">
+                            <ul class="list-inline text-muted">
                                 <li class="list-inline-item mr-2">
                                     <ion-icon name="send"></ion-icon>
                                 </li>
                                 <li class="list-inline-item mr-2">
-                                    <ion-icon name="text"></ion-icon>
+                                    <a id="komen" class="text-muted" href="#" data-toggle="modal" data-target="#modalKomen">
+                                        <ion-icon name="text"></ion-icon>
+                                    </a>
                                 </li>
                                 <li class="list-inline-item mr-2">
                                     <ion-icon name="repeat"></ion-icon>
@@ -117,12 +119,14 @@
                             <p class="">caption 2 lol</p>
                         </div>
                         <div class="float-right">
-                            <ul class="list-inline ">
+                            <ul class="list-inline text-muted">
                                 <li class="list-inline-item mr-2">
                                     <ion-icon name="send"></ion-icon>
                                 </li>
                                 <li class="list-inline-item mr-2">
-                                    <ion-icon name="text"></ion-icon>
+                                    <a id="komen" class="text-muted" href="#">
+                                        <ion-icon name="text"></ion-icon>
+                                    </a>
                                 </li>
                                 <li class="list-inline-item mr-2">
                                     <ion-icon name="repeat"></ion-icon>

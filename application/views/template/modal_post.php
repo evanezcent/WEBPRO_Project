@@ -1,7 +1,8 @@
 <!-- Modal post-->
     <div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div id="modall" class="modal-dialog modal-dialog-centered" role="document" width="100%" style="max-width:unset;" data-backdrop="static" data-keyboard="false">
-            <ul class="list-inline mx-auto justify-content-center">
+        <div id="modal" class="modal-dialog modal-dialog-centered" role="document" width="100%" style="max-width:unset;" data-backdrop="static" data-keyboard="false">
+            <div class="modal-content" style="background:transparent;">
+            <ul id="modalList" class="list-inline mx-auto justify-content-center ">
                 <li class="text-center list-inline-item">
                     <a href="" class="hvr-float" data-toggle="modal" style="color:white; text-decoration: none;" data-target="#modalText">
                         <img class="rounded-circle" src="<?php echo base_url('assets/aa_post.png');?>" alt="" width="100px" height="100px">
@@ -45,6 +46,7 @@
                     </a>
                 </li>
             </ul>
+        </div>
         </div>
     </div>
 

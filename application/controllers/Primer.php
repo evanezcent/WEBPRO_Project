@@ -18,6 +18,7 @@ class Primer extends CI_Controller {
 		$this->load->view('template/page_header');
 		$this->load->view('dashboard');
 		$this->load->view('template/modal_post');
+		$this->load->view('template/modal_comment');
 	}
 
 	public function blogprofil()

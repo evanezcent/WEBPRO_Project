@@ -11,6 +11,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/hover.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/style_dasyboard.css">
     <style>
         body {
             background-color: #001935;
@@ -20,42 +21,39 @@
         #sidebar>.list-group-item {
             padding: 0.4em 1em;
         }
-/*        .hvr-float {
-              display: inline-block;
-              vertical-align: middle;
-              -webkit-transform: perspective(1px) translateZ(0);
-              transform: perspective(1px) translateZ(0);
-              box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-              -webkit-transition-duration: 0.3s;
-              transition-duration: 0.3s;
-              -webkit-transition-property: transform;
-              transition-property: transform;
-              -webkit-transition-timing-function: ease-out;
-              transition-timing-function: ease-out;
-            }
-        .hvr-float:hover, .hvr-float:focus, .hvr-float:active {
-          -webkit-transform: translateY(-8px);
-          transform: translateY(-8px);
-        }*/
 
-        #modall{
-            cursor: pointer;
+        #search-field .form-control {
+            width: 100%;
+        }
+
+        #searching {
+            width: 40%
+        }
+
+        #komen {
+            text-decoration: none;
+        }
+
+        ul>#modalList {
+            z-index: 99999 !important   ;
         }
     </style>
 </head>
 
 <body>
-    <nav id="navv" class="fixed-top navbar navbar-expand-md navbar-dark border border-white border-top-0 border-right-0 border-left-0" style="background-color : #001935;">
+    <nav id="navv" class="l-header fixed-top navbar navbar-expand-md navbar-dark border border-white border-top-0 border-right-0 border-left-0" style="background-color : #001935;">
         <a class="navbar-brand" href="<?php echo base_url(); ?>">Pic - Q</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <form class="form-inline my-2 my-md-0 mr-auto">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" hidden>Search</button>
-            </form>
+        <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
+            <div id="searching">
+                <form class="form-inline my-2 my-md-0" id="search-field">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" hidden>Search</button>
+                </form>
+            </div>
             <div class="float-right">
                 <ul class="navbar-nav active">
                     <li class="nav-item ">
@@ -94,9 +92,15 @@
                                 <a href="" class="text-muted" style="text-decoration: none"><small>Log out</small></a>
                             </div>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#"><ion-icon name="heart"></ion-icon> Likes</a>
-                            <a class="dropdown-item" href="#"><ion-icon name="settings"></ion-icon> Settings</a>
-                            <a class="dropdown-item" href="#"><ion-icon name="help-circle"></ion-icon> Help</a>
+                            <a class="dropdown-item" href="#">
+                                <ion-icon name="heart"></ion-icon> Likes
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <ion-icon name="settings"></ion-icon> Settings
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <ion-icon name="help-circle"></ion-icon> Help
+                            </a>
                             <div class="dropdown-divider"></div>
                             <div class="dropdown-header">
                                 <h6><small>Pic - Q</small></h6>
