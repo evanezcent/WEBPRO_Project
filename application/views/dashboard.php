@@ -82,7 +82,8 @@
                                     <ion-icon name="send"></ion-icon>
                                 </li>
                                 <li class="list-inline-item mr-2">
-                                    <a id="komen" class="text-muted" href="#" data-backdrop="false" data-toggle="modal" data-target="#modalKomen">
+                                    <!-- modal harus tetep open saat klik reply dan cuma ngehilang pas ngeclick outside -->
+                                    <a id="komen" class="text-muted" href="#" data-backdrop="" data-toggle="modal" data-target="#modalKomen">
                                         <ion-icon name="text"></ion-icon>
                                     </a>
                                 </li>
@@ -163,7 +164,7 @@
                                 </div>
                             </div>
                         </li>
-<!-- end perulangan profil blog, max 3 Blog -->
+<!-- end perulangan profil blog, max 4 Blog -->
 
                         <li class="list-group-item" style="background-color:transparent; border-right:0; border-left : 0; border-color: rgb(139, 153, 173)">
                             <div class="d-flex">
