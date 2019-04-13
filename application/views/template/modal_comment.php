@@ -5,7 +5,14 @@
                 <h5 class="modal-title text-muted" id="titleBoxComment">1 Note</h5>
             </div>
             <div class="modal-body">
-                ...
+                <div class="bubbleComment">
+                    <div class="headerBubble">
+                        <h6><small class="font-weight-bold">pratamays</small></h6>
+                    </div>
+                    <div class="bodyBubble">
+                        <small><p>blalabflbsflkandnald adiwodhaoi hdhahfiohaofgaablfvo naj sdj andinaijdnans ajidfhboi aa cw icnqu9nwc</p></small>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <form action="" class="form-inline" id="">

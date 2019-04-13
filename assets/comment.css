@@ -15,3 +15,15 @@
 #modalKomen>.modal-dialog>{
     max-width: 15em;
 }
+#modalKomen>.modal-dialog>.modal-content>.modal-body>.bubbleComment{
+    border-radius: 0.3em!important;
+    background-color: whitesmoke!important;
+    color: black!important;
+}
+#modalKomen>.modal-dialog>.modal-content>.modal-body>.bubbleComment>.headerBubble{
+    margin: 0 5% !important;
+}
+#modalKomen>.modal-dialog>.modal-content>.modal-body>.bubbleComment>.bodyBubble{
+    margin: 0 5% 0 5% !important;
+    padding-bottom: 0.1%;
+}
