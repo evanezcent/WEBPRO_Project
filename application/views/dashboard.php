@@ -9,75 +9,45 @@
                     </div>
 
                     <div class="col rounded d-flex" style="background-color: white; color: black;">
-<<<<<<< HEAD
                         <ul class="list-inline mx-auto mb-1 justify-content-center text-center">
                             <li class="list-inline-item">
                                 <a href="" class="text-dark hvr-float" style="text-decoration:none;" data-toggle="modal" data-target="#modalText">
-=======
-                        <ul class="list-inline mx-auto mb-1 justify-content-center">
-                            <li class="list-inline-item">
-                                <a href="" class="text-dark" style="text-decoration:none;" data-toggle="modal" data-target="#modalText">
->>>>>>> test
                                     <img src="<?php echo base_url('assets/aa.png');?>" alt="" width="40px" height="40px">
                                     <p class="font-weight-lighter mt-1">Text</p>
                                 </a>
                             </li>
                             <li class="list-inline-item ml-3 mt-3">
-<<<<<<< HEAD
                                 <a href="" class="text-dark hvr-float" style="text-decoration:none;" data-toggle="modal" data-target="#modalFoto">
-=======
-                                <a href="" class="text-dark" style="text-decoration:none;" data-toggle="modal" data-target="#modalFoto">
->>>>>>> test
                                     <img src="<?php echo base_url('assets/camera.png'); ?>" alt="" width="40px" height="40px">
                                     <p class="font-weight-lighter mt-1">Photo</p>
                                 </a>
                             </li>
                             <li class="list-inline-item ml-3 mt-3">
-<<<<<<< HEAD
                                 <a href="" class="text-dark hvr-float" style="text-decoration:none;" data-toggle="modal" data-target="#modalQuote">
-=======
-                                <a href="" class="text-dark" style="text-decoration:none;" data-toggle="modal" data-target="#modalQuote">
->>>>>>> test
                                     <img src="<?php echo base_url('assets/quotes.png'); ?>" alt="" width="40px" height="40px">
                                     <p class="font-weight-lighter mt-1">Quote</p>
                                 </a>
                             </li>
                             <li class="list-inline-item ml-3 mt-3">
-<<<<<<< HEAD
                                 <a href="" class="text-dark hvr-float" style="text-decoration:none;" data-toggle="modal" data-target="#modalLink">
-=======
-                                <a href="" class="text-dark" style="text-decoration:none;" data-toggle="modal" data-target="#modalLink">
->>>>>>> test
                                     <img src="<?php echo base_url('assets/link.png'); ?>" alt="" width="40px" height="40px">
                                     <p class="font-weight-lighter mt-1">Link</p>
                                 </a>
                             </li>
                             <li class="list-inline-item ml-3 mt-3">
-<<<<<<< HEAD
                                 <a href="" class="text-dark hvr-float" style="text-decoration:none;" data-toggle="modal" data-target="#modalChat">
-=======
-                                <a href="" class="text-dark" style="text-decoration:none;" data-toggle="modal" data-target="#modalChat">
->>>>>>> test
                                     <img src="<?php echo base_url('assets/icon.png'); ?>" alt="" width="40px" height="40px">
                                     <p class="font-weight-lighter mt-1">Chat</p>
                                 </a>
                             </li>
                             <li class="list-inline-item ml-3 mt-3">
-<<<<<<< HEAD
                                 <a href="" class="text-dark hvr-float" style="text-decoration:none;" data-toggle="modal" data-target="#modalAudio">
-=======
-                                <a href="" class="text-dark" style="text-decoration:none;" data-toggle="modal" data-target="#modalAudio">
->>>>>>> test
                                     <img src="<?php echo base_url('assets/headset.ico'); ?>" alt="" width="40px" height="40px">
                                     <p class="font-weight-lighter mt-1">Audio</p>
                                 </a>
                             </li>
                             <li class="list-inline-item ml-3 mt-3">
-<<<<<<< HEAD
                                 <a href="" class="text-dark hvr-float" style="text-decoration:none;" data-toggle="modal" data-target="#modalVideo">
-=======
-                                <a href="" class="text-dark" style="text-decoration:none;" data-toggle="modal" data-target="#modalVideo">
->>>>>>> test
                                     <img src="<?php echo base_url('assets/video.png'); ?>" alt="" width="40px" height="40px">
                                     <p class="font-weight-lighter mt-1">Video</p>
                                 </a>
@@ -95,11 +65,7 @@
                         </a>
                     </div>
 
-<<<<<<< HEAD
                     <div class="col rounded hvr-curl-top-right" style="background-color: white; color: black;">
-=======
-                    <div class="col rounded" style="background-color: white; color: black;">
->>>>>>> test
 
                         <div>
                             <h6 class="mt-2">pratamays</h6>
@@ -111,22 +77,14 @@
                             <p class="">caption</p>
                         </div>
                         <div class="float-right">
-<<<<<<< HEAD
                             <ul class="list-inline text-muted">
-=======
-                            <ul class="list-inline ">
->>>>>>> test
                                 <li class="list-inline-item mr-2">
                                     <ion-icon name="send"></ion-icon>
                                 </li>
                                 <li class="list-inline-item mr-2">
-<<<<<<< HEAD
                                     <a id="komen" class="text-muted" href="#" data-backdrop="false" data-toggle="modal" data-target="#modalKomen">
                                         <ion-icon name="text"></ion-icon>
                                     </a>
-=======
-                                    <ion-icon name="text"></ion-icon>
->>>>>>> test
                                 </li>
                                 <li class="list-inline-item mr-2">
                                     <ion-icon name="repeat"></ion-icon>
@@ -149,11 +107,7 @@
                         </a>
                     </div>
 
-<<<<<<< HEAD
                     <div class="col rounded hvr-curl-top-right" style="background-color: white; color: black;">
-=======
-                    <div class="col rounded" style="background-color: white; color: black;">
->>>>>>> test
 
                         <div>
                             <h6 class="mt-2">pratamays</h6>
@@ -165,22 +119,14 @@
                             <p class="">caption 2 lol</p>
                         </div>
                         <div class="float-right">
-<<<<<<< HEAD
                             <ul class="list-inline text-muted">
-=======
-                            <ul class="list-inline ">
->>>>>>> test
                                 <li class="list-inline-item mr-2">
                                     <ion-icon name="send"></ion-icon>
                                 </li>
                                 <li class="list-inline-item mr-2">
-<<<<<<< HEAD
                                     <a id="komen" class="text-muted" href="#">
                                         <ion-icon name="text"></ion-icon>
                                     </a>
-=======
-                                    <ion-icon name="text"></ion-icon>
->>>>>>> test
                                 </li>
                                 <li class="list-inline-item mr-2">
                                     <ion-icon name="repeat"></ion-icon>
