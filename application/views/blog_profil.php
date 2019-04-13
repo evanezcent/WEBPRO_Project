@@ -10,6 +10,7 @@
 
                     <div class="col rounded d-flex" style="background-color: white; color: black;">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <ul class="list-inline mx-auto mb-1 justify-content-center text-center">
                             <li class="list-inline-item">
                                 <a href="" class="text-dark hvr-float" style="text-decoration:none;" data-toggle="modal" data-target="#modalText">
@@ -18,66 +19,95 @@
                             <li class="list-inline-item">
                                 <a href="" class="text-dark" style="text-decoration:none;" data-toggle="modal" data-target="#modalText">
 >>>>>>> test
+=======
+                        <ul class="list-inline mx-auto mb-1 justify-content-center text-center">
+                            <li class="list-inline-item">
+                                <a href="" class="text-dark hvr-float" style="text-decoration:none;" data-toggle="modal" data-target="#modalText">
+>>>>>>> a
                                     <img src="<?php echo base_url('assets/aa.png');?>" alt="" width="40px" height="40px">
                                     <p class="font-weight-lighter mt-1">Text</p>
                                 </a>
                             </li>
                             <li class="list-inline-item ml-3 mt-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <a href="" class="text-dark hvr-float" style="text-decoration:none;" data-toggle="modal" data-target="#modalFoto">
 =======
                                 <a href="" class="text-dark" style="text-decoration:none;" data-toggle="modal" data-target="#modalFoto">
 >>>>>>> test
+=======
+                                <a href="" class="text-dark hvr-float" style="text-decoration:none;" data-toggle="modal" data-target="#modalFoto">
+>>>>>>> a
                                     <img src="<?php echo base_url('assets/camera.png'); ?>" alt="" width="40px" height="40px">
                                     <p class="font-weight-lighter mt-1">Photo</p>
                                 </a>
                             </li>
                             <li class="list-inline-item ml-3 mt-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <a href="" class="text-dark hvr-float" style="text-decoration:none;" data-toggle="modal" data-target="#modalQuote">
 =======
                                 <a href="" class="text-dark" style="text-decoration:none;" data-toggle="modal" data-target="#modalQuote">
 >>>>>>> test
+=======
+                                <a href="" class="text-dark hvr-float" style="text-decoration:none;" data-toggle="modal" data-target="#modalQuote">
+>>>>>>> a
                                     <img src="<?php echo base_url('assets/quotes.png'); ?>" alt="" width="40px" height="40px">
                                     <p class="font-weight-lighter mt-1">Quote</p>
                                 </a>
                             </li>
                             <li class="list-inline-item ml-3 mt-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <a href="" class="text-dark hvr-float" style="text-decoration:none;" data-toggle="modal" data-target="#modalLink">
 =======
                                 <a href="" class="text-dark" style="text-decoration:none;" data-toggle="modal" data-target="#modalLink">
 >>>>>>> test
+=======
+                                <a href="" class="text-dark hvr-float" style="text-decoration:none;" data-toggle="modal" data-target="#modalLink">
+>>>>>>> a
                                     <img src="<?php echo base_url('assets/link.png'); ?>" alt="" width="40px" height="40px">
                                     <p class="font-weight-lighter mt-1">Link</p>
                                 </a>
                             </li>
                             <li class="list-inline-item ml-3 mt-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <a href="" class="text-dark hvr-float" style="text-decoration:none;" data-toggle="modal" data-target="#modalChat">
 =======
                                 <a href="" class="text-dark" style="text-decoration:none;" data-toggle="modal" data-target="#modalChat">
 >>>>>>> test
+=======
+                                <a href="" class="text-dark hvr-float" style="text-decoration:none;" data-toggle="modal" data-target="#modalChat">
+>>>>>>> a
                                     <img src="<?php echo base_url('assets/icon.png'); ?>" alt="" width="40px" height="40px">
                                     <p class="font-weight-lighter mt-1">Chat</p>
                                 </a>
                             </li>
                             <li class="list-inline-item ml-3 mt-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <a href="" class="text-dark hvr-float" style="text-decoration:none;" data-toggle="modal" data-target="#modalAudio">
 =======
                                 <a href="" class="text-dark" style="text-decoration:none;" data-toggle="modal" data-target="#modalAudio">
 >>>>>>> test
+=======
+                                <a href="" class="text-dark hvr-float" style="text-decoration:none;" data-toggle="modal" data-target="#modalAudio">
+>>>>>>> a
                                     <img src="<?php echo base_url('assets/headset.ico'); ?>" alt="" width="40px" height="40px">
                                     <p class="font-weight-lighter mt-1">Audio</p>
                                 </a>
                             </li>
                             <li class="list-inline-item ml-3 mt-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <a href="" class="text-dark hvr-float" style="text-decoration:none;" data-toggle="modal" data-target="#modalVideo">
 =======
                                 <a href="" class="text-dark" style="text-decoration:none;" data-toggle="modal" data-target="#modalVideo">
 >>>>>>> test
+=======
+                                <a href="" class="text-dark hvr-float" style="text-decoration:none;" data-toggle="modal" data-target="#modalVideo">
+>>>>>>> a
                                     <img src="<?php echo base_url('assets/video.png'); ?>" alt="" width="40px" height="40px">
                                     <p class="font-weight-lighter mt-1">Video</p>
                                 </a>
@@ -96,10 +126,14 @@
                     </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div class="col rounded hvr-curl-top-right" style="background-color: white; color: black;">
 =======
                     <div class="col rounded" style="background-color: white; color: black;">
 >>>>>>> test
+=======
+                    <div class="col rounded hvr-curl-top-right" style="background-color: white; color: black;">
+>>>>>>> a
 
                         <div>
                             <h6 class="mt-2">pratamays</h6>
@@ -150,10 +184,14 @@
                     </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div class="col rounded hvr-curl-top-right" style="background-color: white; color: black;">
 =======
                     <div class="col rounded" style="background-color: white; color: black;">
 >>>>>>> test
+=======
+                    <div class="col rounded hvr-curl-top-right" style="background-color: white; color: black;">
+>>>>>>> a
 
                         <div>
                             <h6 class="mt-2">pratamays</h6>
