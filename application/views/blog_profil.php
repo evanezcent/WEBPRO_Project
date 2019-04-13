@@ -7,7 +7,7 @@
                             <img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="64px" height="64px">
                         </a>
                     </div>
-
+<!-- ada error ? -->
                     <div class="col rounded d-flex" style="background-color: white; color: black;">
                         <ul class="list-inline mx-auto mb-1 justify-content-center text-center">
                             <li class="list-inline-item">
