@@ -1,0 +1,17 @@
+#modalKomen >.modal-dialog > .modal-content > .modal-body {
+    background-color: lightgray!important;
+}
+#modalKomen >.modal-dialog > .modal-content > .modal-header{
+    justify-content: center !important;
+}
+#modalKomen>.modal-dialog>.modal-content{
+    width: 15em;
+    height:25em;
+    margin : 0 0;    
+}
+#modalKomen>.modal-dialog>.modal-content>.modal-footer>.form-inline>.btn{
+    outline: none;
+}
+#modalKomen>.modal-dialog>{
+    max-width: 15em;
+}

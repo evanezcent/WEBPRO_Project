@@ -82,7 +82,7 @@
                                     <ion-icon name="send"></ion-icon>
                                 </li>
                                 <li class="list-inline-item mr-2">
-                                    <a id="komen" class="text-muted" href="#" data-toggle="modal" data-target="#modalKomen">
+                                    <a id="komen" class="text-muted" href="#" data-backdrop="false" data-toggle="modal" data-target="#modalKomen">
                                         <ion-icon name="text"></ion-icon>
                                     </a>
                                 </li>

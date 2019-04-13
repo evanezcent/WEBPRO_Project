@@ -11,6 +11,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/hover.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/comment.css">
     <style>
         body {
             background-color: #001935;
