@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 17, 2019 at 10:10 AM
+-- Generation Time: Apr 17, 2019 at 11:01 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -31,17 +31,19 @@ SET time_zone = "+00:00";
 CREATE TABLE `comment` (
   `idComment` int(11) NOT NULL,
   `username` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
-  `Komentar` varchar(150) COLLATE utf8_unicode_ci DEFAULT NULL
+  `Komentar` varchar(150) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `idPosting` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `comment`
 --
 
-INSERT INTO `comment` (`idComment`, `username`, `Komentar`) VALUES
-(2, 'tama', 'aaa'),
-(3, 'amat', 'aa'),
-(5, 'tama', 'ssad');
+INSERT INTO `comment` (`idComment`, `username`, `Komentar`, `idPosting`) VALUES
+(6, 'amat', 'huuu', 12),
+(7, 'tama', 'b aja', 12),
+(8, 'amat', 'waw', 14),
+(9, 'tama', 'wkwkwk', 11);
 
 -- --------------------------------------------------------
 
@@ -53,17 +55,18 @@ CREATE TABLE `posting` (
   `idPosting` int(11) NOT NULL,
   `username` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `postText` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `postFoto` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL
+  `postFoto` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `caption` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `posting`
 --
 
-INSERT INTO `posting` (`idPosting`, `username`, `postText`, `postFoto`) VALUES
-(5, 'tama', 'aas', NULL),
-(6, 'tama', 'l', NULL),
-(7, 'tama', 'ooo', NULL);
+INSERT INTO `posting` (`idPosting`, `username`, `postText`, `postFoto`, `caption`) VALUES
+(11, 'amat', 'satu', NULL, 'pertama'),
+(12, 'tama', NULL, 'tempImage-min.jpg', 'kedua'),
+(14, 'tama', 'tiga', NULL, 'ketiga');
 
 -- --------------------------------------------------------
 
@@ -97,7 +100,8 @@ INSERT INTO `user` (`username`, `password`, `email`, `nama`, `fotoProfil`, `bio`
 --
 ALTER TABLE `comment`
   ADD PRIMARY KEY (`idComment`),
-  ADD KEY `username` (`username`) USING BTREE;
+  ADD KEY `username` (`username`) USING BTREE,
+  ADD KEY `idPosting` (`idPosting`);
 
 --
 -- Indexes for table `posting`
@@ -120,13 +124,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `idComment` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idComment` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `posting`
 --
 ALTER TABLE `posting`
-  MODIFY `idPosting` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `idPosting` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Constraints for dumped tables
@@ -136,7 +140,8 @@ ALTER TABLE `posting`
 -- Constraints for table `comment`
 --
 ALTER TABLE `comment`
-  ADD CONSTRAINT `comment` FOREIGN KEY (`username`) REFERENCES `user` (`username`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `commentpost` FOREIGN KEY (`idPosting`) REFERENCES `posting` (`idPosting`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `commentuser` FOREIGN KEY (`username`) REFERENCES `user` (`username`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `posting`
