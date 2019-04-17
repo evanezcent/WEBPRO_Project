@@ -35,7 +35,11 @@
         }
 
         ul>#modalList {
-            z-index: 99999 !important   ;
+            z-index: 99999 !important;
+        }
+
+        #postModal>#modall>.modal-content {
+            border: 0 !important;
         }
     </style>
 </head>

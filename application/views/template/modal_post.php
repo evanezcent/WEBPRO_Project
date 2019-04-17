@@ -1,6 +1,6 @@
 <!-- Modal post-->
 <div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div id="modal" class="modal-dialog modal-dialog-centered" role="document" width="100%" style="max-width:unset;" data-backdrop="static" data-keyboard="false">
+    <div id="modall" class="modal-dialog modal-dialog-centered" role="document" width="100%" style="max-width:unset;" data-backdrop="static" data-keyboard="false">
         <div class="modal-content" style="background:transparent;">
             <ul id="modalList" class="list-inline mx-auto justify-content-center ">
                 <li class="text-center list-inline-item">

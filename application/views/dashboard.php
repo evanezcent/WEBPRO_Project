@@ -75,7 +75,7 @@
                             <?php if ($data['postText'] != NULL) { ?>
                                 <h1 class="mt-4"><?= $data['postText']; ?></h1>
                             <?php } else { ?>
-                                <img src="<?php echo base_url(); ?>profil/<?= $data['postFoto'];?>" alt="" width=100%>
+                                <img src="<?php echo base_url(); ?>profil/<?= $data['postFoto']; ?>" alt="" width=100%>
                             <?php } ?>
                         </div>
                         <div>
@@ -111,10 +111,9 @@
         <!-- sidebar -->
         <div class="col col-4 ml-3 mt-5">
             <h5>Recomended Blog</h5>
-
             <div>
-                <!-- start perulangan Blog -->
                 <ul class="list-group active" id="sidebar">
+                    <!-- start perulangan Blog -->
                     <li class="list-group-item" style="background-color:transparent; border-right:0; border-left : 0; border-color: rgb(139, 153, 173)">
                         <div class="d-flex">
                             <img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="45px" height="45px">
