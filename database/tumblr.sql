@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 17, 2019 at 11:01 AM
+-- Generation Time: Apr 18, 2019 at 12:55 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -44,6 +44,17 @@ INSERT INTO `comment` (`idComment`, `username`, `Komentar`, `idPosting`) VALUES
 (7, 'tama', 'b aja', 12),
 (8, 'amat', 'waw', 14),
 (9, 'tama', 'wkwkwk', 11);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `follower`
+--
+
+CREATE TABLE `follower` (
+  `username` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `idfollower` varchar(10) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -89,7 +100,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`username`, `password`, `email`, `nama`, `fotoProfil`, `bio`) VALUES
 ('amat', '123', 'b@mail.com', 'amaT', NULL, NULL),
-('tama', '123', 'a@gmail.com', 'Tama', NULL, NULL);
+('tama', '123', 'a@gmail.com', 'Tama', NULL, NULL),
+('yoga', '123', 'c@gmail.com', 'Yoga', NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -102,6 +114,13 @@ ALTER TABLE `comment`
   ADD PRIMARY KEY (`idComment`),
   ADD KEY `username` (`username`) USING BTREE,
   ADD KEY `idPosting` (`idPosting`);
+
+--
+-- Indexes for table `follower`
+--
+ALTER TABLE `follower`
+  ADD PRIMARY KEY (`username`),
+  ADD KEY `idfollower` (`idfollower`);
 
 --
 -- Indexes for table `posting`
@@ -142,6 +161,12 @@ ALTER TABLE `posting`
 ALTER TABLE `comment`
   ADD CONSTRAINT `commentpost` FOREIGN KEY (`idPosting`) REFERENCES `posting` (`idPosting`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `commentuser` FOREIGN KEY (`username`) REFERENCES `user` (`username`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `follower`
+--
+ALTER TABLE `follower`
+  ADD CONSTRAINT `follow` FOREIGN KEY (`idfollower`) REFERENCES `user` (`username`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `posting`
