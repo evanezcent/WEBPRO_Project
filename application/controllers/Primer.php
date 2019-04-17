@@ -7,8 +7,7 @@ class Primer extends CI_Controller {
 	{
 		parent::__construct();
 		//Load Dependencies
-		$this->load->library('form_validation');
-		$this->load->library('session');
+		$this->load->model('model_dashboard');
 
 	}
 
@@ -29,9 +28,13 @@ class Primer extends CI_Controller {
 	}
 
 	// Add a new item
-	public function add()
+	public function dashboard()
 	{
-
+		$data['post'] = $this->model_dashboard->getAllPost();
+		$this->load->view('template/page_header');
+		$this->load->view('dashboard',$data);
+		$this->load->view('template/modal_post');
+		$this->load->view('template/modal_comment');
 	}
 
 	//Update one item
