@@ -77,7 +77,7 @@
             <div class="modal-body">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Title" id="post" style="font-size:30px">
-                    <textarea class="form-control" rows="5" placeholder="Your text here" id="caption"></textarea>
+                    <textarea class="form-control" rows="5" placeholder="Your text here"></textarea>
                     <input type="text" class="form-control" placeholder="#tags" id="tag" style="font-size:13px">
                 </div>
             </div>
@@ -295,6 +295,47 @@
         </div>
     </div>
 </div>
+
+<!-- edit text modal -->
+<?php foreach ($post as $data) : ?>
+    <div class="modal fade" id="modalEditText<?= $data['idPosting']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <a class="modal-title dropdown-toggle text-muted" href="#" id="dropdownAkun" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <small class="font-weight-bold" style="color:black;">pratamays</small>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownAkun">
+                            <a class="dropdown-item" href="#">pratamays</a>
+                        </div>
+                    </div>
+
+                    <!-- opsi -->
+                    <div>
+                        <a class="modal-title dropdown-toggle text-muted" href="#" id="dropdownOpsi" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <ion-icon name="settings"></ion-icon>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownOpsi">
+                            <a class="dropdown-item" href="#">ini opsi</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Title" id="post" value="<?= $data['postText']; ?>" style="font-size:30px">
+                        <textarea class="form-control" rows="5" placeholder="Your text here" ><?= $data['caption']; ?></textarea>
+                        <input type="text" class="form-control" placeholder="#tags" id="tag" style="font-size:13px">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Post</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php endforeach ?>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
