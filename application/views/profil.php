@@ -7,7 +7,6 @@
                         <img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="64px" height="64px">
                     </a>
                 </div>
-
                 <div class="col rounded d-flex" style="background-color: white; color: black;">
                     <ul class="list-inline mx-auto mb-1 justify-content-center text-center">
                         <li class="list-inline-item">
@@ -114,90 +113,32 @@
             <!-- end perulangan php -->
         </div>
 
-
-        <!-- sidebar -->
+        <!-- SIDE BAR -->
         <div class="col col-4 ml-3 mt-5">
-            <h5>Recomended Blog</h5>
+            <div>
+                <a href="#" class="text-muted" style="text-decoration: none"><b>pratamays</b></a>
+                <p>Tama</p>
+            </div>
+
             <div>
                 <ul class="list-group active" id="sidebar">
-                    <!-- start perulangan Blog -->
                     <li class="list-group-item" style="background-color:transparent; border-right:0; border-left : 0; border-color: rgb(139, 153, 173)">
-                        <div class="d-flex">
-                            <img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="45px" height="45px">
-
-                            <div class="ml-2">
-                                <b>pratamays</b>
-                                <p class="text-muted" style="margin-bottom : 0;"><small>Tama</small></p>
-                            </div>
-
-                            <div class="ml-auto mt-2">
-                                <a href="" class="text-muted" style="text-decoration:none;">
-                                    <ion-icon name="add-circle" size="large"></ion-icon>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- end perulangan profil blog, max 4 Blog -->
-
+                        <a href="#" class="text-muted" style="text-decoration: none; text-decoration:none;"><b>Posts</b></a></li>
                     <li class="list-group-item" style="background-color:transparent; border-right:0; border-left : 0; border-color: rgb(139, 153, 173)">
-                        <div class="d-flex">
-                            <img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="45px" height="45px">
-
-                            <div class="ml-2">
-                                <b>pratamays</b>
-                                <p class="text-muted" style="margin-bottom : 0;"><small>Tama</small></p>
-                            </div>
-
-                            <div class="ml-auto mt-2">
-                                <a href="" class="text-muted" style="text-decoration:none;">
-                                    <ion-icon name="add-circle" size="large"></ion-icon>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
+                        <a href="#" class="text-muted" style="text-decoration: none; text-decoration:none;"><b>Review flagged posts</b></a></li>
                     <li class="list-group-item" style="background-color:transparent; border-right:0; border-left : 0; border-color: rgb(139, 153, 173)">
-                        <div class="d-flex">
-                            <img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="45px" height="45px">
-
-                            <div class="ml-2">
-                                <b>pratamays</b>
-                                <p class="text-muted" style="margin-bottom : 0;"><small>Tama</small></p>
-                            </div>
-
-                            <div class="ml-auto mt-2">
-                                <a href="" class="text-muted" style="text-decoration:none;">
-                                    <ion-icon name="add-circle" size="large"></ion-icon>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item" style="background-color:transparent; border-right:0; border-left : 0; border-color: rgb(139, 153, 173)">
-                        <div class="d-flex">
-                            <img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="45px" height="45px">
-
-                            <div class="ml-2">
-                                <b>pratamays</b>
-                                <p class="text-muted" style="margin-bottom : 0;"><small>Tama</small></p>
-                            </div>
-
-                            <div class="ml-auto mt-2">
-                                <a href="" class="text-muted" style="text-decoration:none;">
-                                    <ion-icon name="add-circle" size="large"></ion-icon>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
+                        <a href="#" class="text-muted" style="text-decoration: none; text-decoration:none;"><b>Edit appearance</b></a></li>
                 </ul>
 
-                <a href="#" class="mt-1" style="text-decoration: none"><small>Explore all of tumbler</small></a>
+                <a href="#" class="mt-1 link text-muted" style="text-decoration: none"><small>Mass post editor</small></a>
             </div>
 
             <div>
                 <h5 class="mt-3">Radar</h5>
             </div>
-            <div class="d-flex ml-3">
+            <div class="d-flex">
                 <a href="#fake">
-                    <img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="45px" height="45px">
+                    <img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="50px" height="50px">
                 </a>
                 <div class="ml-2">
                     <a href="#" style="color:white; text-decoration: none;"><b>pratamays</b></a><br>
@@ -205,12 +146,12 @@
                 </div>
 
                 <div class="ml-auto mt-2">
-                    <a href="" class="text-muted mr-3" style="text-decoration:none;">
+                    <a href="" class="text-muted" style="text-decoration:none;">
                         <ion-icon name="add-circle" size="large"></ion-icon>
                     </a>
                 </div>
             </div>
-            <div class="mt-2 ml-3">
+            <div class="mt-2">
                 <img src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="" width="100%">
                 <div class="d-flex rounded-bottom pt-1 pl-2" style="background-color:white" width="100%">
                     <div class="mr-auto ml-2" style="color:black">
@@ -230,3 +171,4 @@
         </div>
     </div>
 </div>
+<!-- END SIDBAR -->

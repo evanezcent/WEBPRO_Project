@@ -33,3 +33,9 @@
 #modalKomen>.modal-dialog>.modal-content>.modal-body>.bubbleComment>.bodyBubble>small>p{
     padding-top: 0.3em;
 }
+.modal-backdrop>.modal-backdrop.show{
+    opacity: 0;
+}
+.row.mt-4>.col.rounded.hvr-curl-top-right>.float-right>.list-inline.text-muted>.list-inline-item.mr-2.dropup.show>.dropdown-menu.show{
+    left: -7em!important;
+}

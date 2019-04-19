@@ -117,7 +117,7 @@
                                 </a>
                                 <div class="ml-2">
                                     <small>
-                                        <a href="<?php echo base_url(); ?>primer/blogprofil" style="color:black; text-decoration: none;"><b>pratamays</b></a><br>
+                                        <a href="<?php echo base_url(); ?>primer/profil" style="color:black; text-decoration: none;"><b>pratamays</b></a><br>
                                         <p class="text-muted">Tama</p>
                                     </small>
                                 </div>
