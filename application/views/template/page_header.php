@@ -61,12 +61,12 @@
             <div class="float-right">
                 <ul class="navbar-nav active">
                     <li class="nav-item ">
-                        <a class="nav-link" href="<?php echo base_url(); ?>primer/dashboard">
+                        <a class="nav-link" href="<?php echo base_url(); ?>">
                             <ion-icon name="home" size="large"></ion-icon>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url()?>primer/explorer">
+                        <a class="nav-link" href="#">
                             <ion-icon name="compass" size="large"></ion-icon>
                         </a>
                     </li>
