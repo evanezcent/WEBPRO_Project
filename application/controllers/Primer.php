@@ -20,14 +20,17 @@ class Primer extends CI_Controller {
 		$this->load->view('template/modal_comment');
 	}
 
-	public function blogprofil()
+	// Profil Dashboard
+	public function profil()
 	{
+		$data['post'] = $this->model_dashboard->getAllPost();
 		$this->load->view('template/page_header');
-		$this->load->view('blog_profil');
+		$this->load->view('profil',$data);
 		$this->load->view('template/modal_post');
+		$this->load->view('template/modal_comment');
 	}
 
-	// Add a new item
+	// Dashboard
 	public function dashboard()
 	{
 		$data['post'] = $this->model_dashboard->getAllPost();
