@@ -69,6 +69,14 @@ class Primer extends CI_Controller {
 
 		$this->model_post->insertText($data);
 	}
+	public function explorer()
+	{
+		$this->load->view('template/page_header');
+		$this->load->view('explorer');
+		$this->load->view('template/modal_post');
+		$this->load->view('template/modal_comment');
+	}
+
 	//Update one item
 	public function update( $id = NULL )
 	{
