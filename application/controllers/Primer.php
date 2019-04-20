@@ -8,6 +8,7 @@ class Primer extends CI_Controller {
 		parent::__construct();
 		//Load Dependencies
 		$this->load->model('model_dashboard');
+		$this->load->model('model_post');
 
 	}
 
@@ -40,6 +41,34 @@ class Primer extends CI_Controller {
 		$this->load->view('template/modal_comment');
 	}
 
+	//Upload post foto
+	// public function postUpload(){
+
+	// 	$config['upload_path']          =  './post/';
+ //        $config['allowed_types']        =  'gif|jpeg|jpg|png';
+ //        $config['max_size']             =  1000000000000;
+ //        $config['max_width']            =  1920;
+ //        $config['max_height']           =  1080;
+
+ //        $upload_data = $this->upload->data(); 
+ //  		$file_name =   $upload_data['file_name'];
+
+ //        $this->load->library('upload', $config);
+ //        $foto = $this->input->post('')
+	// }
+
+	//Upload post text
+	public function postText(){
+
+		$data = array(
+			'username' => 'tama',
+			'postText' => $this->input->post('title'),
+			'caption' => $this->input->post('caption'),
+			'tag' => $this->input->post('tag') 
+		);
+
+		$this->model_post->insertText($data);
+	}
 	//Update one item
 	public function update( $id = NULL )
 	{
