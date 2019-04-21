@@ -13,5 +13,5 @@ class Model_explorer extends CI_Model
 		return $query->result_array();
 	}
 
-	public function getNotesCount($post[''] =  $this->getAllPost(), )
+//	public function getNotesCount($post[''] =  $this->getAllPost(), )
 }
