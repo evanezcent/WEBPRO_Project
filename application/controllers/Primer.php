@@ -51,7 +51,8 @@ class Primer extends CI_Controller {
         $config['max_height']           =  5000;
         
   		$this->load->library('upload', $config);
-  		
+
+  		$this->upload->do_upload('file');
         $data = $this->upload->data();
         $file = $data['file_name'];
   		echo $file;
