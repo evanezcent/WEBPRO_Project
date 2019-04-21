@@ -9,7 +9,7 @@ class Primer extends CI_Controller {
 		//Load Dependencies
 		$this->load->model('model_dashboard');
 		$this->load->model('model_post');
-
+		$this->load->model('model_explorer');
 	}
 
 	// List all your items
@@ -71,9 +71,9 @@ class Primer extends CI_Controller {
 	}
 	public function explorer()
 	{
+		$data['post'] = $this->model_dashboard->getAllPost();
 		$this->load->view('template/page_header');
-		$this->load->view('explorer');
-		$this->load->view('template/modal_post');
+		$this->load->view('explorer',$data);
 		$this->load->view('template/modal_comment');
 	}
 
