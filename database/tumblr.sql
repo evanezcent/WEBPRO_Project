@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 18, 2019 at 12:55 AM
+-- Generation Time: Apr 21, 2019 at 09:03 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -67,17 +67,19 @@ CREATE TABLE `posting` (
   `username` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `postText` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL,
   `postFoto` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `caption` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL
+  `caption` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `tag` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `posting`
 --
 
-INSERT INTO `posting` (`idPosting`, `username`, `postText`, `postFoto`, `caption`) VALUES
-(11, 'amat', 'satu', NULL, 'pertama'),
-(12, 'tama', NULL, 'tempImage-min.jpg', 'kedua'),
-(14, 'tama', 'tiga', NULL, 'ketiga');
+INSERT INTO `posting` (`idPosting`, `username`, `postText`, `postFoto`, `caption`, `tag`) VALUES
+(11, 'amat', 'satu', NULL, 'pertama', NULL),
+(12, 'tama', NULL, 'tempImage-min.jpg', 'kedua', NULL),
+(14, 'tama', 'tiga', NULL, 'ketiga', NULL),
+(15, 'tama', 'empat', NULL, 'post ke empat', '');
 
 -- --------------------------------------------------------
 
@@ -149,7 +151,7 @@ ALTER TABLE `comment`
 -- AUTO_INCREMENT for table `posting`
 --
 ALTER TABLE `posting`
-  MODIFY `idPosting` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `idPosting` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- Constraints for dumped tables

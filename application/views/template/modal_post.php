@@ -115,18 +115,14 @@
                     </div>
                 </div>
             </div>
-            <div class="modal-body">
-                <div class="custom-file">
-                    <?php echo $error;?>
-                    <?php echo form_open_multipart('Primer/postUpload');?>
-                    <input type="file" class="custom-file-input" id="inputGroupFile01" name="userfile">
-                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                <div class="modal-body form-group">
+                    <?php echo form_open_multipart('Primer/do_upload');?>
+                        <input type="file" name="file" style="color: black">
+                        <textarea class="form-control" rows="3" name="caption" placeholder="Your text here" style="width: 100%;">   </textarea>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-primary" value="Post" >
+                    </form>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <input type="submit" class="btn btn-primary" name="Submit" data-dismiss="modal">
-            </div>
         </div>
     </div>
 </div>

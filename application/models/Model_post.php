@@ -4,6 +4,10 @@ class Model_post extends CI_Model{
 
     public function insertText($value){
     	$this->db->insert('posting', $value);
-    	redirect('primer/dashboard','refresh');
+    }
+
+    public function insertImg($data)
+    {
+    	$this->db->insert('posting',$data);
     }
 }
