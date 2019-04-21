@@ -75,19 +75,22 @@
                 </div>
             </div>
             <div class="modal-body">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Title" id="post" style="font-size:30px">
-                    <textarea class="form-control" rows="5" placeholder="Your text here"></textarea>
-                    <input type="text" class="form-control" placeholder="#tags" id="tag" style="font-size:13px">
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Post</button>
+                <form action="<?php echo base_url(); ?>primer/postText" method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="title" placeholder="Title" id="post" style="font-size:30px">
+                        <textarea class="form-control" rows="5" name="caption" placeholder="Your text here"></textarea>
+                        <input type="text" class="form-control" name="tag" placeholder="#tags" id="tag" style="font-size:13px">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Post</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
+
 <!-- post foto -->
 <div class="modal fade" id="modalFoto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -114,13 +117,15 @@
             </div>
             <div class="modal-body">
                 <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="inputGroupFile01">
+                    <?php echo $error;?>
+                    <?php echo form_open_multipart('Primer/postUpload');?>
+                    <input type="file" class="custom-file-input" id="inputGroupFile01" name="userfile">
                     <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Post</button>
+                <input type="submit" class="btn btn-primary" name="Submit" data-dismiss="modal">
             </div>
         </div>
     </div>
