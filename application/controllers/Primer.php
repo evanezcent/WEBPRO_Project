@@ -41,21 +41,32 @@ class Primer extends CI_Controller {
 		$this->load->view('template/modal_comment');
 	}
 
-	//Upload post foto
-	// public function postUpload(){
+	// Upload post foto
+	public function do_upload(){
 
-	// 	$config['upload_path']          =  './post/';
- //        $config['allowed_types']        =  'gif|jpeg|jpg|png';
- //        $config['max_size']             =  1000000000000;
- //        $config['max_width']            =  1920;
- //        $config['max_height']           =  1080;
+		$config['upload_path']          =  './post/';
+        $config['allowed_types']        =  'gif|jpeg|jpg|png';
+        $config['max_size']             =  1000000000000;
+        $config['max_width']            =  5000;
+        $config['max_height']           =  5000;
+        
+  		$this->load->library('upload', $config);
 
- //        $upload_data = $this->upload->data(); 
- //  		$file_name =   $upload_data['file_name'];
+  		$this->upload->do_upload('file');
+        $data = $this->upload->data();
+        $file = $data['file_name'];
+  		echo $file;
 
- //        $this->load->library('upload', $config);
- //        $foto = $this->input->post('')
-	// }
+  		$data = array(
+			'username' => 'tama',
+			'caption' => $this->input->post('caption'),
+			'postFoto' => $file
+		);
+
+        // $this->session->set_flashdata('upload_data', $upload['file_name']);
+        $this->model_post->insertImg($data);
+        
+	}
 
 	//Upload post text
 	public function postText(){
@@ -68,6 +79,7 @@ class Primer extends CI_Controller {
 		);
 
 		$this->model_post->insertText($data);
+		redirect('primer/dashboard','refresh');
 	}
 	public function explorer()
 	{
