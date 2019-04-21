@@ -1,5 +1,5 @@
 
-	<style>
+<style>
 		body {
 			background-color: #001935;
 			color: whitesmoke;
@@ -9,8 +9,6 @@
 		#sidebar>.list-group-item {
 			padding: 0.4em 1em;
 		}
-
-
 
 		@media (min-width: 1em) {
 			.grid {
@@ -76,17 +74,13 @@
 			text-decoration: none !important
 		}
 		/* ---- grid ---- */
-
-
 		/* clearfix */
 		.grid:after {
 			content: '';
 			display: block;
 			clear: both;
 		}
-
 		/* ---- grid-item ---- */
-
 		.mycard {
 			float: left;
 			width: 300px;
@@ -130,7 +124,7 @@
 							<li class="list-group-item" style="background-color:transparent; border-right:0; border-left : 0; border-color: rgb(139, 153, 173)">
 								<div class="d-flex">
 									<img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="45px" height="45px">
-
+s
 									<div class="ml-2">
 										<b>pratamays</b>
 										<p class="text-muted" style="margin-bottom : 0;"><small>Tama</small></p>
