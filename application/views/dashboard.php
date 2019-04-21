@@ -75,7 +75,7 @@
                             <?php if ($data['postText'] != NULL) { ?>
                                 <h1 class="mt-4"><?= $data['postText']; ?></h1>
                             <?php } else { ?>
-                                <img src="<?php echo base_url(); ?>profil/<?= $data['postFoto']; ?>" alt="" width=100%>
+                                <img src="<?php echo base_url(); ?>post/<?= $data['postFoto']; ?>" alt="" width=100%>
                             <?php } ?>
                         </div>
                         <div>
