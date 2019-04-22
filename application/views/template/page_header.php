@@ -45,13 +45,13 @@
 </head>
 
 <body>
-    <nav id="navv" class="l-header fixed-top navbar navbar-expand-md navbar-dark border border-white border-top-0 border-right-0 border-left-0" style="background-color : #001935;">
-        <a class="navbar-brand" href="<?php echo base_url(); ?>">Pic - Q</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="l-header fixed-top navbar navbar-expand-md navbar-dark border border-white border-top-0 border-right-0 border-left-0" style="background-color : #001935;">
+        <a class="navbar-brand" href="<?php echo base_url('Primer'); ?>">Pic - Q</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navTumblr" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse justify-content-between" id="navTumblr">
             <div id="searching">
                 <form class="form-inline my-2 my-md-0" id="search-field">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

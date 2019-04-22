@@ -231,7 +231,7 @@ input[type=text], input[type=password] {
         <section class="section-1">
             <div class="img1">
                 <div class="signup">
-                    <h1>tumblr</h1>
+                    <h1>Pic - Q</h1>
                     <p>Come for what you love.<br> Stay for what you discover.</p>
                     <div class="form-popup-login" id="myForm">
                         <form action="<?php echo base_url('Home/userlogin') ?>" method="post" class="form-container">

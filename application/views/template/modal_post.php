@@ -80,6 +80,15 @@
                         <input type="text" class="form-control" name="title" placeholder="Title" id="post" style="font-size:30px">
                         <textarea class="form-control" rows="5" name="caption" placeholder="Your text here"></textarea>
                         <input type="text" class="form-control" name="tag" placeholder="#tags" id="tag" style="font-size:13px">
+                        <input type="hidden" class="form-control" name="user" value="
+                        <?php 
+                            if (isset($_SESSION['success'])) {
+                                echo $_SESSION['success'];
+                            }
+                            else{
+                                echo "GAGAL";
+                            }
+                         ?>">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -101,7 +110,7 @@
                         <small class="font-weight-bold" style="color:black;">pratamays</small>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="dropdownAkun">
-                        <a class="dropdown-item" href="#">pratamays</a>
+                        <a class="dropdown-item" href="#"><?php echo $_SESSION['success']; ?></a>
                     </div>
                 </div>
 
@@ -121,6 +130,8 @@
                         <textarea class="form-control" rows="3" name="caption" placeholder="Your text here" style="width: 100%;">   </textarea>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <input type="submit" class="btn btn-primary" value="Post" >
+                        <input type="hidden" class="form-control" name="user" value="<?php echo $_SESSION['success']; ?>">
+                         <input type="text" class="form-control" name="tag" placeholder="#tags" id="tag" style="font-size:13px">
                     </form>
                 </div>
         </div>
