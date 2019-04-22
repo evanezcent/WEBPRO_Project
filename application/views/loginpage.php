@@ -236,7 +236,7 @@ input[type=text], input[type=password] {
                     <div class="form-popup-login" id="myForm">
                         <form action="<?php echo base_url('Home/userlogin') ?>" method="post" class="form-container">
                             <input type="text" placeholder="Username" name="your_name" required><br>
-                            <input type="text" placeholder="Password" name="your_pass" required><br>
+                            <input type="password" placeholder="Password" name="your_pass" required><br>
                             <button type="submit" class="btn">Log In</button>
                         </form><br>
                     </div>
