@@ -74,6 +74,7 @@ class Primer extends CI_Controller {
 
         // $this->session->set_flashdata('upload_data', $upload['file_name']);
         $this->model_post->insertImg($data);
+        redirect('primer','refresh');
         
 	}
 
@@ -88,7 +89,7 @@ class Primer extends CI_Controller {
 		);
 
 		$this->model_post->insertText($data);
-		redirect('primer/dashboard','refresh');
+		redirect('primer','refresh');
 	}
 	public function explorer()
 	{
