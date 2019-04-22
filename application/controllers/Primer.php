@@ -9,16 +9,24 @@ class Primer extends CI_Controller {
 		//Load Dependencies
 		$this->load->model('model_dashboard');
 		$this->load->model('model_post');
+		$this->load->model('model_user');
 
 	}
 
 	// List all your items
 	public function index()
 	{
-		$this->load->view('template/page_header');
-		$this->load->view('dashboard');
-		$this->load->view('template/modal_post');
-		$this->load->view('template/modal_comment');
+		if (isset($_SESSION['success'])){
+			$data = $this->model_user->loadUser();
+			$this->load->view('template/page_header',$data);
+			$this->load->view('dashboard',$data);
+			$this->load->view('template/modal_post',$data);
+			$this->load->view('template/modal_comment',$data);
+		}
+		else{
+			redirect('Home','refresh');
+		}
+		
 	}
 
 	// Profil Dashboard
@@ -34,7 +42,7 @@ class Primer extends CI_Controller {
 	// Dashboard
 	public function dashboard()
 	{
-		$data['post'] = $this->model_dashboard->getAllPost();
+		$data['posting'] = $this->model_dashboard->getAllPost();
 		$this->load->view('template/page_header');
 		$this->load->view('dashboard',$data);
 		$this->load->view('template/modal_post');

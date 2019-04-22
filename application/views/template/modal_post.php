@@ -298,7 +298,7 @@
 </div>
 
 <!-- edit text modal -->
-<?php foreach ($post as $data) : ?>
+<?php foreach($posting as $data) : ?>
     <div class="modal fade" id="modalEditText<?= $data['idPosting']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
