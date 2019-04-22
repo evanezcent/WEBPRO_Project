@@ -93,7 +93,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <div class="dropdown-header">
                                 <h6><small>ACCOUNT</small></h6>
-                                <a href="" class="text-muted" style="text-decoration: none"><small>Log out</small></a>
+                                <a href="<?php echo base_url('Home/logout'); ?>" class="text-muted" style="text-decoration: none"><small>Log out</small></a>
                             </div>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">
@@ -117,7 +117,16 @@
                                 </a>
                                 <div class="ml-2">
                                     <small>
-                                        <a href="<?php echo base_url(); ?>primer/profil" style="color:black; text-decoration: none;"><b>pratamays</b></a><br>
+                                        <a href="<?php echo base_url(); ?>primer/profil" style="color:black; text-decoration: none;"><b>
+                                            <?php 
+                                            if (isset($_SESSION['success'])) {
+                                                echo $_SESSION['success'];
+                                            }
+                                            else{
+                                                echo "GAGAL";
+                                            }
+                                            ?> 
+                                        </b></a><br>
                                         <p class="text-muted">Tama</p>
                                     </small>
                                 </div>

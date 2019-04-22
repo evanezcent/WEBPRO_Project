@@ -58,7 +58,7 @@
             </div>
 
             <!-- start perulangan php untuk post -->
-            <?php foreach ($post as $data) : ?>
+            <?php foreach ($posting as $data) : ?>
                 <div class="row mt-4">
                     <div class="col col-2">
                         <a href="#fake">
