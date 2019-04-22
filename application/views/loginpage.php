@@ -38,7 +38,7 @@ body, html{
   }
   
   .section-1{
-    background-image:url('/img/image1.png');
+    background-image:url("<?php echo base_url('assets/image1.png'); ?>");
     min-height:100%;
     
   }
@@ -288,12 +288,12 @@ input[type=text], input[type=password] {
                                 <table class="table table-borderless">
                                     <tbody>
                                         <tr>
-                                            <td><img src="img/works2.JPG"></td>
-                                            <td><img src="img/works.JPG"></td>
+                                            <td><img src="<?php echo base_url('assets/works2.jpg'); ?>"></td>
+                                            <td><img src="<?php echo base_url('assets/works.jpg'); ?>"></td>
                                         </tr>
                                         <tr>
-                                            <td><img src="img/works3.JPG"></td>
-                                            <td><img src="img/works1.JPG"></td>
+                                            <td><img src="<?php echo base_url('assets/works3.jpg'); ?>"></td>
+                                            <td><img src="<?php echo base_url('assets/works1.jpg'); ?>"></td>
                                         </tr>
                                     </tbody>
                                 </table>
