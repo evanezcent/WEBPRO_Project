@@ -17,11 +17,12 @@ class Primer extends CI_Controller {
 	public function index()
 	{
 		if (isset($_SESSION['success'])){
-			$data = $this->model_user->loadUser();
-			$this->load->view('template/page_header',$data);
+			$user = $this->model_user->loadUser();
+			$data['posting'] = $this->model_dashboard->getAllPost();
+			$this->load->view('template/page_header',$user);
 			$this->load->view('dashboard',$data);
-			$this->load->view('template/modal_post',$data);
-			$this->load->view('template/modal_comment',$data);
+			$this->load->view('template/modal_post');
+			$this->load->view('template/modal_comment');
 		}
 		else{
 			redirect('Home','refresh');
@@ -40,14 +41,14 @@ class Primer extends CI_Controller {
 	}
 
 	// Dashboard
-	public function dashboard()
-	{
-		$data['posting'] = $this->model_dashboard->getAllPost();
-		$this->load->view('template/page_header');
-		$this->load->view('dashboard',$data);
-		$this->load->view('template/modal_post');
-		$this->load->view('template/modal_comment');
-	}
+	// public function dashboard()
+	// {
+	// 	$data['posting'] = $this->model_dashboard->getAllPost();
+	// 	$this->load->view('template/page_header');
+	// 	$this->load->view('dashboard',$data);
+	// 	$this->load->view('template/modal_post');
+	// 	$this->load->view('template/modal_comment');
+	// }
 
 	// Upload post foto
 	public function do_upload(){
