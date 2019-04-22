@@ -33,7 +33,7 @@ class Primer extends CI_Controller {
 	// Profil Dashboard
 	public function profil()
 	{
-		$data['post'] = $this->model_dashboard->getAllPost();
+		$data['posting'] = $this->model_dashboard->getAllPost();
 		$this->load->view('template/page_header');
 		$this->load->view('profil',$data);
 		$this->load->view('template/modal_post');
@@ -67,8 +67,9 @@ class Primer extends CI_Controller {
   		echo $file;
 
   		$data = array(
-			'username' => 'tama',
+			'username' => $this->input->post('user'),
 			'caption' => $this->input->post('caption'),
+			'tag' => $this->input->post('tag'),
 			'postFoto' => $file
 		);
 
@@ -82,7 +83,7 @@ class Primer extends CI_Controller {
 	public function postText(){
 
 		$data = array(
-			'username' => 'tama',
+			'username' => $this->input->post('user'),
 			'postText' => $this->input->post('title'),
 			'caption' => $this->input->post('caption'),
 			'tag' => $this->input->post('tag') 
