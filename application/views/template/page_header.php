@@ -45,7 +45,7 @@
 </head>
 
 <body>
-    <nav class="l-header fixed-top navbar navbar-expand-md navbar-dark border border-white border-top-0 border-right-0 border-left-0" style="background-color : #001935;">
+    <nav class="l-header fixed-top navbar navbar-expand-lg navbar-dark border border-white border-top-0 border-right-0 border-left-0" style="background-color : #001935;">
         <a class="navbar-brand" href="<?php echo base_url('Primer'); ?>">Pic - Q</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navTumblr" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
