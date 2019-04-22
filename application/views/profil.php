@@ -57,7 +57,9 @@
             </div>
 
             <!-- start perulangan php untuk post -->
-            <?php foreach ($post as $data) : ?>
+            <?php foreach ($posting as $data) : 
+                if ($data['username'] == $_SESSION['success']){
+            ?>
                 <div class="row mt-4">
                     <div class="col col-2">
                         <a href="#fake">
@@ -74,11 +76,12 @@
                             <?php if ($data['postText'] != NULL) { ?>
                                 <h1 class="mt-4"><?= $data['postText']; ?></h1>
                             <?php } else { ?>
-                                <img src="<?php echo base_url(); ?>profil/<?= $data['postFoto']; ?>" alt="" width=100%>
+                                <img src="<?php echo base_url(); ?>post/<?= $data['postFoto']; ?>" alt="" width=100%>
                             <?php } ?>
                         </div>
                         <div>
-                            <p class=""><?= $data['caption']; ?></p>
+                            <p><?= $data['caption']; ?></p>
+                            <small class="text-muted"><p><?= $data['tag']; ?></p></small>
                         </div>
                         <div class="float-right">
                             <ul class="list-inline text-muted">
@@ -109,14 +112,26 @@
 
                     </div>
                 </div>
-            <?php endforeach ?>
+            <?php 
+                }
+                endforeach 
+            ?>
             <!-- end perulangan php -->
         </div>
 
         <!-- SIDE BAR -->
         <div class="col col-4 ml-3 mt-5">
             <div>
-                <a href="#" class="text-muted" style="text-decoration: none"><b>pratamays</b></a>
+                <a href="#" class="text-muted" style="text-decoration: none"><b>
+                    <?php 
+                        if (isset($_SESSION['success'])) {
+                            echo $_SESSION['success'];
+                        }
+                        else{
+                            echo "GAGAL";
+                        }
+                    ?> 
+                    </b></a>
                 <p>Tama</p>
             </div>
 

@@ -80,6 +80,7 @@
                         </div>
                         <div>
                             <p class=""><?= $data['caption']; ?></p>
+                            <small class="text-muted"><p><?= $data['tag']; ?></p></small>
                         </div>
                         <div class="float-right">
                             <ul class="list-inline text-muted">
