@@ -45,7 +45,7 @@
 </head>
 
 <body>
-    <nav class="l-header fixed-top navbar navbar-expand-lg navbar-dark border border-white border-top-0 border-right-0 border-left-0" style="background-color : #001935;">
+    <nav class="l-header fixed-top navbar navbar-expand-lg navbar-dark border border-white border-top-0 border-right-0 border-left-0 py-0" style="background-color : #001935;">
         <a class="navbar-brand" href="<?php echo base_url('Primer'); ?>">Pic - Q</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navTumblr" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -90,7 +90,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <ion-icon name="person" size="large"></ion-icon>
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <div class="dropdown-header">
                                 <h6><small>ACCOUNT</small></h6>
                                 <a href="<?php echo base_url('Home/logout'); ?>" class="text-muted" style="text-decoration: none"><small>Log out</small></a>
