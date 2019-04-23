@@ -1,5 +1,5 @@
 
-	<style>
+<style>
 		body {
 			background-color: #001935;
 			color: whitesmoke;
@@ -9,8 +9,6 @@
 		#sidebar>.list-group-item {
 			padding: 0.4em 1em;
 		}
-
-
 
 		@media (min-width: 1em) {
 			.grid {
@@ -76,17 +74,13 @@
 			text-decoration: none !important
 		}
 		/* ---- grid ---- */
-
-
 		/* clearfix */
 		.grid:after {
 			content: '';
 			display: block;
 			clear: both;
 		}
-
 		/* ---- grid-item ---- */
-
 		.mycard {
 			float: left;
 			width: 300px;
@@ -130,7 +124,7 @@
 							<li class="list-group-item" style="background-color:transparent; border-right:0; border-left : 0; border-color: rgb(139, 153, 173)">
 								<div class="d-flex">
 									<img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="45px" height="45px">
-
+s
 									<div class="ml-2">
 										<b>pratamays</b>
 										<p class="text-muted" style="margin-bottom : 0;"><small>Tama</small></p>
@@ -203,6 +197,7 @@
 					</div>
 				</div>
 				<!-- Start Perulangan Explorer-->
+				<?php foreach ($post as $data) : ?>
 				<div class="card mycard">
 					<div class="class-header p-3 border-bottom" style="height: 60px">
 						<div class=""container>
@@ -210,19 +205,24 @@
 								<div class="col-12 pl-3 px-0" style="height: 120px">
 									<div class="d-inline-flex pr-2">
 										<a href="">
-											<img src="https://66.media.tumblr.com/avatar_54b555cf6abd_64.pnj" class="img-fluid rounded" alt="" style="width: 30px">
+											<img src="<?php echo base_url(); ?>assets/tempImage-min.jpg" class="img-fluid rounded" alt="" style="width: 30px">
 										</a>
 									</div>
-									<a href="" class="nounderline text-dark font-weight-bold" >asdasdasds</a>
+									<a href="" class="nounderline text-dark font-weight-bold" ><?= $data['username']; ?></a>
 									<a href="" class="nounderline">Follow</a>
 								</div>
 							</div>
 						</div>
 					</div>
-					<img src="https://66.media.tumblr.com/7f29ea150dd1af2b8b21620e5819e4cc/tumblr_pq3lqeMdPr1tt0dgdo1_500.jpg" class="card-img" alt="...">
+<!--					card body-->
+					<?php if ($data['postText'] != NULL) { ?>
 					<div class="card-body">
-						<p class="card-text text-dark">Post Content</p>
+						<p class="card-text text-dark"><?= $data['postText']; ?></p>
 					</div>
+					<?php } else { ?>
+					<img src="<?php echo base_url(); ?>profil/<?= $data['postFoto']; ?>" class="card-img" alt="...">
+					<?php } ?>
+<!--					card footer-->
 					<div class="card-footer">
 						<div class="float-right">
 							<ul class="list-inline text-muted">
@@ -231,7 +231,7 @@
 								</li>
 								<li class="list-inline-item mr-2">
 									<!-- modal harus tetep open saat klik reply dan cuma ngehilang pas ngeclick outside -->
-									<a id="komen" class="text-muted" href="#" data-backdrop="" data-toggle="modal" data-target="#modalKomen">
+									<a id="komen" class="text-muted" href="#" data-toggle="modal" data-target="#modalKomen">
 										<ion-icon name="text"></ion-icon>
 									</a>
 								</li>
@@ -245,173 +245,176 @@
 						</div>
 					</div>
 				</div>
+				<?php endforeach ?>
 				<!-- End Perulangan explorer-->
 				<!-- START DUMMY BUAT CONTOH-->
-				<div class="card mycard">
-					<div class="class-header p-3 border-bottom" style="height: 60px">
-						<div class=""container>
-							<div class="row">
-								<div class="col-12 pl-3 px-0" style="height: 120px">
-									<div class="d-inline-flex pr-2">
-										<a href="">
-											<img src="https://66.media.tumblr.com/avatar_54b555cf6abd_64.pnj" class="img-fluid rounded" alt="" style="width: 30px">
-										</a>
+				<div>
+					<div class="card mycard">
+						<div class="class-header p-3 border-bottom" style="height: 60px">
+							<div class=""container>
+								<div class="row">
+									<div class="col-12 pl-3 px-0" style="height: 120px">
+										<div class="d-inline-flex pr-2">
+											<a href="">
+												<img src="https://66.media.tumblr.com/avatar_54b555cf6abd_64.pnj" class="img-fluid rounded" alt="" style="width: 30px">
+											</a>
+										</div>
+										<a href="" class="nounderline text-dark font-weight-bold" >asdasdasds</a>
+										<a href="" class="nounderline">Follow</a>
 									</div>
-									<a href="" class="nounderline text-dark font-weight-bold" >asdasdasds</a>
-									<a href="" class="nounderline">Follow</a>
 								</div>
 							</div>
 						</div>
-					</div>
-					<img src="https://66.media.tumblr.com/3addaa13d13e9f324098fe6d2343c9b7/tumblr_pq3hjiqpPp1uwx719_400.jpg" class="card-img" alt="...">
-					<div class="card-body">
-						<p class="card-text text-dark">Post Content</p>
-					</div>
-					<div class="card-footer">
-						<div class="float-right">
-							<ul class="list-inline text-muted">
-								<li class="list-inline-item mr-2">
-									<ion-icon name="send"></ion-icon>
-								</li>
-								<li class="list-inline-item mr-2">
-									<!-- modal harus tetep open saat klik reply dan cuma ngehilang pas ngeclick outside -->
-									<a id="komen" class="text-muted" href="#" data-backdrop="" data-toggle="modal" data-target="#modalKomen">
-										<ion-icon name="text"></ion-icon>
-									</a>
-								</li>
-								<li class="list-inline-item mr-2">
-									<ion-icon name="repeat"></ion-icon>
-								</li>
-								<li class="list-inline-item mr-2">
-									<ion-icon name="settings"></ion-icon>
-								</li>
-							</ul>
+						<img src="https://66.media.tumblr.com/3addaa13d13e9f324098fe6d2343c9b7/tumblr_pq3hjiqpPp1uwx719_400.jpg" class="card-img" alt="...">
+						<div class="card-body">
+							<p class="card-text text-dark">Post Content</p>
 						</div>
-					</div>
-				</div>
-				<div class="card mycard">
-					<div class="class-header p-3 border-bottom" style="height: 60px">
-						<div class=""container>
-							<div class="row">
-								<div class="col-12 pl-3 px-0" style="height: 120px">
-									<div class="d-inline-flex pr-2">
-										<a href="">
-											<img src="https://66.media.tumblr.com/avatar_54b555cf6abd_64.pnj" class="img-fluid rounded" alt="" style="width: 30px">
+						<div class="card-footer">
+							<div class="float-right">
+								<ul class="list-inline text-muted">
+									<li class="list-inline-item mr-2">
+										<ion-icon name="send"></ion-icon>
+									</li>
+									<li class="list-inline-item mr-2">
+										<!-- modal harus tetep open saat klik reply dan cuma ngehilang pas ngeclick outside -->
+										<a id="komen" class="text-muted" href="#" data-backdrop="" data-toggle="modal" data-target="#modalKomen">
+											<ion-icon name="text"></ion-icon>
 										</a>
-									</div>
-									<a href="" class="nounderline text-dark font-weight-bold" >asdasdasds</a>
-									<a href="" class="nounderline">Follow</a>
-								</div>
+									</li>
+									<li class="list-inline-item mr-2">
+										<ion-icon name="repeat"></ion-icon>
+									</li>
+									<li class="list-inline-item mr-2">
+										<ion-icon name="settings"></ion-icon>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>
-					<img src="https://66.media.tumblr.com/ab5ea7c948237f25823bb908c5c40510/tumblr_pp1ydqwj9l1xm6mero1_500.jpg" class="card-img" alt="...">
-					<div class="card-body">
-						<p class="card-text text-dark">Post Content</p>
-					</div>
-					<div class="card-footer">
-						<div class="float-right">
-							<ul class="list-inline text-muted">
-								<li class="list-inline-item mr-2">
-									<ion-icon name="send"></ion-icon>
-								</li>
-								<li class="list-inline-item mr-2">
-									<!-- modal harus tetep open saat klik reply dan cuma ngehilang pas ngeclick outside -->
-									<a id="komen" class="text-muted" href="#" data-backdrop="" data-toggle="modal" data-target="#modalKomen">
-										<ion-icon name="text"></ion-icon>
-									</a>
-								</li>
-								<li class="list-inline-item mr-2">
-									<ion-icon name="repeat"></ion-icon>
-								</li>
-								<li class="list-inline-item mr-2">
-									<ion-icon name="settings"></ion-icon>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="card mycard">
-					<div class="class-header p-3 border-bottom" style="height: 60px">
-						<div class=""container>
-							<div class="row">
-								<div class="col-12 pl-3 px-0" style="height: 120px">
-									<div class="d-inline-flex pr-2">
-										<a href="">
-											<img src="https://66.media.tumblr.com/avatar_54b555cf6abd_64.pnj" class="img-fluid rounded" alt="" style="width: 30px">
-										</a>
+					<div class="card mycard">
+						<div class="class-header p-3 border-bottom" style="height: 60px">
+							<div class=""container>
+								<div class="row">
+									<div class="col-12 pl-3 px-0" style="height: 120px">
+										<div class="d-inline-flex pr-2">
+											<a href="">
+												<img src="https://66.media.tumblr.com/avatar_54b555cf6abd_64.pnj" class="img-fluid rounded" alt="" style="width: 30px">
+											</a>
+										</div>
+										<a href="" class="nounderline text-dark font-weight-bold" >asdasdasds</a>
+										<a href="" class="nounderline">Follow</a>
 									</div>
-									<a href="" class="nounderline text-dark font-weight-bold" >asdasdasds</a>
-									<a href="" class="nounderline">Follow</a>
 								</div>
 							</div>
 						</div>
-					</div>
-					<img src="https://66.media.tumblr.com/2110020230981b2cf14376e515f28897/tumblr_pq60hfVGjh1u2uujfo3_500.gif" class="card-img" alt="...">
-					<div class="card-body">
-						<p class="card-text text-dark">Post Content</p>
-					</div>
-					<div class="card-footer">
-						<div class="float-right">
-							<ul class="list-inline text-muted">
-								<li class="list-inline-item mr-2">
-									<ion-icon name="send"></ion-icon>
-								</li>
-								<li class="list-inline-item mr-2">
-									<!-- modal harus tetep open saat klik reply dan cuma ngehilang pas ngeclick outside -->
-									<a id="komen" class="text-muted" href="#" data-backdrop="" data-toggle="modal" data-target="#modalKomen">
-										<ion-icon name="text"></ion-icon>
-									</a>
-								</li>
-								<li class="list-inline-item mr-2">
-									<ion-icon name="repeat"></ion-icon>
-								</li>
-								<li class="list-inline-item mr-2">
-									<ion-icon name="settings"></ion-icon>
-								</li>
-							</ul>
+						<img src="https://66.media.tumblr.com/ab5ea7c948237f25823bb908c5c40510/tumblr_pp1ydqwj9l1xm6mero1_500.jpg" class="card-img" alt="...">
+						<div class="card-body">
+							<p class="card-text text-dark">Post Content</p>
 						</div>
-					</div>
-				</div>
-				<div class="card mycard">
-					<div class="class-header p-3 border-bottom" style="height: 60px">
-						<div class=""container>
-							<div class="row">
-								<div class="col-12 pl-3 px-0" style="height: 120px">
-									<div class="d-inline-flex pr-2">
-										<a href="">
-											<img src="https://66.media.tumblr.com/avatar_54b555cf6abd_64.pnj" class="img-fluid rounded" alt="" style="width: 30px">
+						<div class="card-footer">
+							<div class="float-right">
+								<ul class="list-inline text-muted">
+									<li class="list-inline-item mr-2">
+										<ion-icon name="send"></ion-icon>
+									</li>
+									<li class="list-inline-item mr-2">
+										<!-- modal harus tetep open saat klik reply dan cuma ngehilang pas ngeclick outside -->
+										<a id="komen" class="text-muted" href="#" data-backdrop="" data-toggle="modal" data-target="#modalKomen">
+											<ion-icon name="text"></ion-icon>
 										</a>
-									</div>
-									<a href="" class="nounderline text-dark font-weight-bold" >asdasdasds</a>
-									<a href="" class="nounderline">Follow</a>
-								</div>
+									</li>
+									<li class="list-inline-item mr-2">
+										<ion-icon name="repeat"></ion-icon>
+									</li>
+									<li class="list-inline-item mr-2">
+										<ion-icon name="settings"></ion-icon>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>
-					<img src="https://66.media.tumblr.com/86280b0bebbf6bd6c8d88b0aa48d20ff/tumblr_pp57s93mxy1r65eeio2_400.gif" class="card-img" alt="...">
-					<div class="card-body">
-						<p class="card-text text-dark">Post Content</p>
+					<div class="card mycard">
+						<div class="class-header p-3 border-bottom" style="height: 60px">
+							<div class=""container>
+								<div class="row">
+									<div class="col-12 pl-3 px-0" style="height: 120px">
+										<div class="d-inline-flex pr-2">
+											<a href="">
+												<img src="https://66.media.tumblr.com/avatar_54b555cf6abd_64.pnj" class="img-fluid rounded" alt="" style="width: 30px">
+											</a>
+										</div>
+										<a href="" class="nounderline text-dark font-weight-bold" >asdasdasds</a>
+										<a href="" class="nounderline">Follow</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<img src="https://66.media.tumblr.com/2110020230981b2cf14376e515f28897/tumblr_pq60hfVGjh1u2uujfo3_500.gif" class="card-img" alt="...">
+						<div class="card-body">
+							<p class="card-text text-dark">Post Content</p>
+						</div>
+						<div class="card-footer">
+							<div class="float-right">
+								<ul class="list-inline text-muted">
+									<li class="list-inline-item mr-2">
+										<ion-icon name="send"></ion-icon>
+									</li>
+									<li class="list-inline-item mr-2">
+										<!-- modal harus tetep open saat klik reply dan cuma ngehilang pas ngeclick outside -->
+										<a id="komen" class="text-muted" href="#" data-backdrop="" data-toggle="modal" data-target="#modalKomen">
+											<ion-icon name="text"></ion-icon>
+										</a>
+									</li>
+									<li class="list-inline-item mr-2">
+										<ion-icon name="repeat"></ion-icon>
+									</li>
+									<li class="list-inline-item mr-2">
+										<ion-icon name="settings"></ion-icon>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
-					<div class="card-footer">
-						<div class="float-right">
-							<ul class="list-inline text-muted">
-								<li class="list-inline-item mr-2">
-									<ion-icon name="send"></ion-icon>
-								</li>
-								<li class="list-inline-item mr-2">
-									<!-- modal harus tetep open saat klik reply dan cuma ngehilang pas ngeclick outside -->
-									<a id="komen" class="text-muted" href="#" data-backdrop="" data-toggle="modal" data-target="#modalKomen">
-										<ion-icon name="text"></ion-icon>
-									</a>
-								</li>
-								<li class="list-inline-item mr-2">
-									<ion-icon name="repeat"></ion-icon>
-								</li>
-								<li class="list-inline-item mr-2">
-									<ion-icon name="settings"></ion-icon>
-								</li>
-							</ul>
+					<div class="card mycard">
+						<div class="class-header p-3 border-bottom" style="height: 60px">
+							<div class=""container>
+								<div class="row">
+									<div class="col-12 pl-3 px-0" style="height: 120px">
+										<div class="d-inline-flex pr-2">
+											<a href="">
+												<img src="https://66.media.tumblr.com/avatar_54b555cf6abd_64.pnj" class="img-fluid rounded" alt="" style="width: 30px">
+											</a>
+										</div>
+										<a href="" class="nounderline text-dark font-weight-bold" >asdasdasds</a>
+										<a href="" class="nounderline">Follow</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<img src="https://66.media.tumblr.com/86280b0bebbf6bd6c8d88b0aa48d20ff/tumblr_pp57s93mxy1r65eeio2_400.gif" class="card-img" alt="...">
+						<div class="card-body">
+							<p class="card-text text-dark">Post Content</p>
+						</div>
+						<div class="card-footer">
+							<div class="float-right">
+								<ul class="list-inline text-muted">
+									<li class="list-inline-item mr-2">
+										<ion-icon name="send"></ion-icon>
+									</li>
+									<li class="list-inline-item mr-2">
+										<!-- modal harus tetep open saat klik reply dan cuma ngehilang pas ngeclick outside -->
+										<a id="komen" class="text-muted" href="#" data-backdrop="" data-toggle="modal" data-target="#modalKomen">
+											<ion-icon name="text"></ion-icon>
+										</a>
+									</li>
+									<li class="list-inline-item mr-2">
+										<ion-icon name="repeat"></ion-icon>
+									</li>
+									<li class="list-inline-item mr-2">
+										<ion-icon name="settings"></ion-icon>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -420,8 +423,11 @@
 		</div>
 	</div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
 	<script>
 		$('.grid').masonry({
 			itemSelector: '.card',
@@ -430,4 +436,6 @@
 		});
 
 	</script>
+</body>
 
+</html>
