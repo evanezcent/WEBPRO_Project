@@ -17,7 +17,7 @@ class Primer extends CI_Controller {
 	public function index()
 	{
 		if (isset($_SESSION['success'])){
-			$user = $this->model_user->loadUser();
+			$user['akun'] = $this->model_dashboard->loadUser();
 			$data['posting'] = $this->model_dashboard->getAllPost();
 			$this->load->view('template/page_header',$user);
 			$this->load->view('dashboard',$data);
@@ -40,15 +40,11 @@ class Primer extends CI_Controller {
 		$this->load->view('template/modal_comment');
 	}
 
-	// Dashboard
-	// public function dashboard()
-	// {
-	// 	$data['posting'] = $this->model_dashboard->getAllPost();
-	// 	$this->load->view('template/page_header');
-	// 	$this->load->view('dashboard',$data);
-	// 	$this->load->view('template/modal_post');
-	// 	$this->load->view('template/modal_comment');
-	// }
+	public function inbox()
+	{
+		$this->load->view('template/page_header');
+		$this->load->view('inbox-PickQ');
+	}
 
 	// Upload post foto
 	public function do_upload(){
@@ -101,7 +97,7 @@ class Primer extends CI_Controller {
 	}
 
 	//Update one item
-	public function update( $id = NULL )
+	public function update()
 	{
 
 	}

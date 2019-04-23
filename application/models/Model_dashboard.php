@@ -7,4 +7,8 @@ class Model_dashboard extends CI_Model{
         $query = $this->db->get('posting');
         return $query->result_array();
     }
+    public function loadUser(){
+    	$query = $this->db->get('user');
+    	return $query->result_array();
+    }
 }

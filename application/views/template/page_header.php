@@ -61,7 +61,7 @@
             <div class="float-right">
                 <ul class="navbar-nav active">
                     <li class="nav-item ">
-                        <a class="nav-link" href="<?php echo base_url(); ?>">
+                        <a class="nav-link" href="<?php echo base_url('primer'); ?>">
                             <ion-icon name="home" size="large"></ion-icon>
                         </a>
                     </li>
@@ -71,7 +71,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="<?= base_url(); ?>primer/inbox">
                             <ion-icon name="mail" size="large"></ion-icon>
                         </a>
                     </li>
@@ -127,7 +127,13 @@
                                             }
                                             ?> 
                                         </b></a><br>
-                                        <p class="text-muted">Tama</p>
+                                        <?php  
+                                            foreach ($akun as $user) :
+                                                if ($_SESSION['success'] == $user['username']){ ?>
+                                                    <p class="text-muted"><?php echo $user['nama']; ?></p>
+                                        <?php   }
+                                            endforeach
+                                        ?>
                                     </small>
                                 </div>
                             </div>
