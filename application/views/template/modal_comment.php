@@ -26,6 +26,9 @@
 	input:focus{
 		border-color: none;
 	}
+	.modal>.modal-dialog>.modal-content{
+		width: 20em!important;
+	}
 </style>
 
 <div class="modal fade" id="modalKomen" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

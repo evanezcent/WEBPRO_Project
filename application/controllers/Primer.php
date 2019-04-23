@@ -34,7 +34,8 @@ class Primer extends CI_Controller {
 	public function profil()
 	{
 		$data['posting'] = $this->model_dashboard->getAllPost();
-		$this->load->view('template/page_header');
+		$user['akun'] = $this->model_dashboard->loadUser();
+		$this->load->view('template/page_header',$user);
 		$this->load->view('profil',$data);
 		$this->load->view('template/modal_post');
 		$this->load->view('template/modal_comment');
@@ -44,6 +45,8 @@ class Primer extends CI_Controller {
 	{
 		$this->load->view('template/page_header');
 		$this->load->view('inbox-PickQ');
+		$this->load->view('template/modal_post');
+		$this->load->view('template/modal_comment');
 	}
 
 	// Upload post foto
