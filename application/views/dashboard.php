@@ -122,73 +122,29 @@
             <div>
                 <ul class="list-group active" id="sidebar">
                     <!-- start perulangan Blog -->
-                    <li class="list-group-item" style="background-color:transparent; border-right:0; border-left : 0; border-color: rgb(139, 153, 173)">
-                        <div class="d-flex">
-                            <img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="45px" height="45px">
+                    <?php 
+                        $id =0;
+                        foreach ($akun as $user) :
+                        if ($id<=3){
+                    ?>
+                        <li class="list-group-item" style="background-color:transparent; border-right:0; border-left : 0; border-color: rgb(139, 153, 173)">
+                            <div class="d-flex">
+                                <img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="45px" height="45px">
 
-                            <div class="ml-2">
-                                <b>pratamays</b>
-                                <p class="text-muted" style="margin-bottom : 0;"><small>Tama</small></p>
+                                <div class="ml-2">
+                                    <b><?= $user['username']; ?></b>
+                                    <p class="text-muted" style="margin-bottom : 0;"><small><?= $user['nama']; ?></small></p>
+                                </div>
+                    <?php }else{ break; } ?>
+                                <div class="ml-auto mt-2">
+                                    <a href="" class="text-muted" style="text-decoration:none;">
+                                        <ion-icon name="add-circle" size="large"></ion-icon>
+                                    </a>
+                                </div>
                             </div>
-
-                            <div class="ml-auto mt-2">
-                                <a href="" class="text-muted" style="text-decoration:none;">
-                                    <ion-icon name="add-circle" size="large"></ion-icon>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
+                    <?php $id++; endforeach ?>
                     <!-- end perulangan profil blog, max 4 Blog -->
-
-                    <li class="list-group-item" style="background-color:transparent; border-right:0; border-left : 0; border-color: rgb(139, 153, 173)">
-                        <div class="d-flex">
-                            <img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="45px" height="45px">
-
-                            <div class="ml-2">
-                                <b>pratamays</b>
-                                <p class="text-muted" style="margin-bottom : 0;"><small>Tama</small></p>
-                            </div>
-
-                            <div class="ml-auto mt-2">
-                                <a href="" class="text-muted" style="text-decoration:none;">
-                                    <ion-icon name="add-circle" size="large"></ion-icon>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item" style="background-color:transparent; border-right:0; border-left : 0; border-color: rgb(139, 153, 173)">
-                        <div class="d-flex">
-                            <img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="45px" height="45px">
-
-                            <div class="ml-2">
-                                <b>pratamays</b>
-                                <p class="text-muted" style="margin-bottom : 0;"><small>Tama</small></p>
-                            </div>
-
-                            <div class="ml-auto mt-2">
-                                <a href="" class="text-muted" style="text-decoration:none;">
-                                    <ion-icon name="add-circle" size="large"></ion-icon>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item" style="background-color:transparent; border-right:0; border-left : 0; border-color: rgb(139, 153, 173)">
-                        <div class="d-flex">
-                            <img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="45px" height="45px">
-
-                            <div class="ml-2">
-                                <b>pratamays</b>
-                                <p class="text-muted" style="margin-bottom : 0;"><small>Tama</small></p>
-                            </div>
-
-                            <div class="ml-auto mt-2">
-                                <a href="" class="text-muted" style="text-decoration:none;">
-                                    <ion-icon name="add-circle" size="large"></ion-icon>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
 
                 <a href="#" class="mt-1" style="text-decoration: none"><small>Explore all of tumbler</small></a>
             </div>
