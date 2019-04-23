@@ -220,7 +220,7 @@ s
 						<p class="card-text text-dark"><?= $data['postText']; ?></p>
 					</div>
 					<?php } else { ?>
-					<img src="<?php echo base_url(); ?>profil/<?= $data['postFoto']; ?>" class="card-img" alt="...">
+					<img src="<?php echo base_url(); ?>post/<?= $data['postFoto']; ?>" class="card-img" alt="...">
 					<?php } ?>
 <!--					card footer-->
 					<div class="card-footer">
