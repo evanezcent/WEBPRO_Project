@@ -13,9 +13,15 @@ class Model_user extends CI_Model {
         $result = $this->db->get('user');
         return $result->result_array();
     }
+
     public function loadUser()
     {
     	return $this->db->get('user')->result_array();
+    }
+
+    public function register($data)
+    {
+    	$this->db->insert('user', $data);
     }
 
 }

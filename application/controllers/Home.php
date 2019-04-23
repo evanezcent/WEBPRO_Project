@@ -23,7 +23,7 @@ class Home extends CI_Controller {
 		$this->load->view('loginpage');
 	}
 
-	//Update one item
+	//Login
 	public function userlogin()
 	{
 		$user = $this->model_user->findUser();
@@ -37,6 +37,27 @@ class Home extends CI_Controller {
 		}
 	}
 
+	public function userRegister()
+	{
+		$data = array(
+			'email'=> $this->input->post('email'),
+			'username'=> $this->input->post('username'),
+			'password'=> $this->input->post('psw')
+		);
+
+		$this->model_user->register($data);
+
+		// setelah register lanjut ke dashboard
+		$user = $this->model_user->findUser();
+		if ($user != NULL){
+			$this->session->set_userdata('success', $user[0]['username']);
+            redirect('Primer','refresh');
+		}
+		else{
+			$this->session->set_flashdata('falselogin','nodata');
+            redirect('Home','refresh');
+		}
+	}
 	//Delete one item
 	public function logout()
 	{

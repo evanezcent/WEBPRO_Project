@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 21, 2019 at 09:03 AM
+-- Generation Time: Apr 23, 2019 at 02:23 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -59,6 +59,20 @@ CREATE TABLE `follower` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `inbox`
+--
+
+CREATE TABLE `inbox` (
+  `idPesan` int(11) NOT NULL,
+  `idPosting` int(11) NOT NULL,
+  `userAsal` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `userTujuan` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `pesan` varchar(200) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `posting`
 --
 
@@ -79,7 +93,12 @@ INSERT INTO `posting` (`idPosting`, `username`, `postText`, `postFoto`, `caption
 (11, 'amat', 'satu', NULL, 'pertama', NULL),
 (12, 'tama', NULL, 'tempImage-min.jpg', 'kedua', NULL),
 (14, 'tama', 'tiga', NULL, 'ketiga', NULL),
-(15, 'tama', 'empat', NULL, 'post ke empat', '');
+(15, 'tama', 'empat', NULL, 'post ke empat', ''),
+(24, 'tama', NULL, 'me.jpg', '   kelima', NULL),
+(25, 'tama', NULL, '400_F_133319905_lbTo0t1j2dpV7ogDdAb9aji2YCMVsuST.jpg', '   ke 6', NULL),
+(26, 'tama', 'tujuh', NULL, 'ketujuh', '#udahbisa'),
+(27, 'tama', 'delapan', NULL, 'Kedelapan', ''),
+(29, 'yoga', NULL, '2016-06-11-0114.jpg', '   ke 10', '');
 
 -- --------------------------------------------------------
 
@@ -101,7 +120,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`username`, `password`, `email`, `nama`, `fotoProfil`, `bio`) VALUES
-('amat', '123', 'b@mail.com', 'amaT', NULL, NULL),
+('amat', '123', 'b@mail.com', 'Amat', NULL, NULL),
+('evanescent', '777', 'tyoga124@gmail.com', NULL, NULL, NULL),
+('pratamays', '777', 'pratamayo16@gmail.com', NULL, NULL, NULL),
 ('tama', '123', 'a@gmail.com', 'Tama', NULL, NULL),
 ('yoga', '123', 'c@gmail.com', 'Yoga', NULL, NULL);
 
@@ -123,6 +144,13 @@ ALTER TABLE `comment`
 ALTER TABLE `follower`
   ADD PRIMARY KEY (`username`),
   ADD KEY `idfollower` (`idfollower`);
+
+--
+-- Indexes for table `inbox`
+--
+ALTER TABLE `inbox`
+  ADD PRIMARY KEY (`idPesan`),
+  ADD KEY `userAsal` (`userAsal`);
 
 --
 -- Indexes for table `posting`
@@ -148,10 +176,16 @@ ALTER TABLE `comment`
   MODIFY `idComment` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
+-- AUTO_INCREMENT for table `inbox`
+--
+ALTER TABLE `inbox`
+  MODIFY `idPesan` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `posting`
 --
 ALTER TABLE `posting`
-  MODIFY `idPosting` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `idPosting` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- Constraints for dumped tables
