@@ -104,7 +104,7 @@
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="dropdownPost">
                                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEditText<?= $data['idPosting']; ?>">Edit</a>
-                                        <a class="dropdown-item" href="#">Delete</a>
+                                        <a class="dropdown-item" href="<?php echo base_url(); ?>/primer/delete/<?php echo $data['idPosting']; ?>">Delete</a>
                                     </div>
                                 </li>
                             </ul>

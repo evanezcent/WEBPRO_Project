@@ -334,16 +334,19 @@
                     </div>
                 </div>
                 <div class="modal-body">
+            <form action="<?php echo base_url(); ?>primer/update" method="post">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Title" id="post" value="<?= $data['postText']; ?>" style="font-size:30px">
-                        <textarea class="form-control" rows="5" placeholder="Your text here" ><?= $data['caption']; ?></textarea>
-                        <input type="text" class="form-control" placeholder="#tags" id="tag" style="font-size:13px">
+                        <input type="text" class="form-control" placeholder="title" name="post" value="<?= $data['postText']; ?>" style="font-size:30px">
+                        <textarea class="form-control" rows="5" placeholder="Your text here" name="caption"><?= $data['caption']; ?></textarea>
+                        <input type="text" class="form-control" placeholder="#tags" name="tag" style="font-size:13px">
+                        <input type="hidden" name="id" value="<?= $data['idPosting']; ?>">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Post</button>
+                    <button type="submit" class="btn btn-primary">Post</button>
                 </div>
+            </form>
             </div>
         </div>
     </div>

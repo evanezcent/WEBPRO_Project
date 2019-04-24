@@ -85,7 +85,7 @@ class Primer extends CI_Controller {
 			'username' => $this->input->post('user'),
 			'postText' => $this->input->post('title'),
 			'caption' => $this->input->post('caption'),
-			'tag' => $this->input->post('tag') 
+			'tag' => '#'.$this->input->post('tag') 
 		);
 
 		$this->model_post->insertText($data);
@@ -102,13 +102,16 @@ class Primer extends CI_Controller {
 	//Update one item
 	public function update()
 	{
-
+		$id = $this->input->post('id');
+		$this->model_post->updatePost($id);
+		redirect('primer/profil','refresh');
 	}
 
 	//Delete one item
-	public function delete( $id = NULL )
+	public function delete($id)
 	{
-
+		$this->model_post->deletePost($id);
+		redirect('primer/profil','refresh');
 	}
 }
 
