@@ -234,11 +234,11 @@
         <section class="section-1">
             <div class="img1">
                 <div class="signup">
-                    <h1>tumblr</h1>
+                    <h1>Pic - Q</h1>
                     <p>Come for what you love.<br> Stay for what you discover.</p>
                     <div class="form-popup" id="myForm">
                         <form action="<?php echo base_url('Home/userRegister'); ?>" class="form-container" method="post">
-                            <input type="text" placeholder="Email" name="email" required><br>
+                            <input type="text" placeholder="Email" name="Pemail" required><br>
                             <input type="password" placeholder="Password" name="psw" required><br>
                             <input type="text" placeholder="Username" name="username" required><br>
 
