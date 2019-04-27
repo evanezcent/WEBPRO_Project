@@ -94,7 +94,8 @@ class Primer extends CI_Controller {
 	public function explorer()
 	{
 		$data['post'] = $this->model_dashboard->getAllPost();
-		$this->load->view('template/page_header');
+		$user['akun'] = $this->model_dashboard->loadUser();
+		$this->load->view('template/page_header',$user);
 		$this->load->view('explorer',$data);
 		$this->load->view('template/modal_comment');
 	}
