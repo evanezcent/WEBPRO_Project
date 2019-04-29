@@ -17,10 +17,12 @@
             background-color: #001935;
             color: whitesmoke;
         }
+
         body .mt-5 .col-7 #formEdit {
             background-color: white;
             color: black;
         }
+
         #sidebar>.list-group-item {
             padding: 0.4em 1em;
         }
@@ -116,17 +118,16 @@
                             </div>
                             <div class="dropdown-divider"></div>
                             <div class="d-flex ml-3">
-                                <?php  
-                                    foreach ($akun as $user) :
-                                    if ( $_SESSION['success'] == $user['username']){
-                                        if ($user['fotoProfil'] == ""){
+                                <?php
+                                foreach ($akun as $user) :
+                                    if ($_SESSION['success'] == $user['username']) {
+                                        if ($user['fotoProfil'] == "") {
                                             $foto = "default.png";
-                                        }
-                                        else{
+                                        } else {
                                             $foto = $user['fotoProfil'];
                                         }
                                     }
-                                    endforeach
+                                endforeach
                                 ?>
                                 <a href="#fake">
                                     <img alt="" class="rounded" src="<?php echo base_url(); ?>profil/<?php echo $foto ?>" alt="UNKNOWN" width="30px" height="30px">
@@ -134,22 +135,21 @@
                                 <div class="ml-2">
                                     <small>
                                         <a href="<?php echo base_url(); ?>primer/profil" style="color:black; text-decoration: none;"><b>
-                                            <?php 
+                                                <?php
                                                 if (isset($_SESSION['success'])) {
                                                     echo $_SESSION['success'];
-                                                }
-                                                else{
+                                                } else {
                                                     echo "GAGAL";
                                                 }
-                                            ?> 
-                                        </b></a><br>
-                                        <?php  
-                                            foreach ($akun as $user) :
-                                                if ($_SESSION['success'] == $user['username']){ ?>
-                                                    <p class="text-muted"><?php echo $user['nama']; ?></p>
-                                        <?php   }
-                                            endforeach
-                                        ?>
+                                                ?>
+                                            </b></a><br>
+                                        <?php
+                                        foreach ($akun as $user) :
+                                            if ($_SESSION['success'] == $user['username']) { ?>
+                                                <p class="text-muted"><?php echo $user['nama']; ?></p>
+                                            <?php   }
+                                    endforeach
+                                    ?>
                                     </small>
                                 </div>
                             </div>

@@ -3,17 +3,16 @@
         <div class="col col-7 mt-5">
             <div class="row">
                 <div class="col col-2">
-                    <?php  
-                        foreach ($akun as $user) :
-                            if ( $_SESSION['success'] == $user['username']){
-                                if ($user['fotoProfil'] == ""){
-                                    $foto = "default.png";
-                                }
-                                else{
-                                    $foto = $user['fotoProfil'];
-                                }
+                    <?php
+                    foreach ($akun as $user) :
+                        if ($_SESSION['success'] == $user['username']) {
+                            if ($user['fotoProfil'] == "") {
+                                $foto = "default.png";
+                            } else {
+                                $foto = $user['fotoProfil'];
                             }
-                        endforeach
+                        }
+                    endforeach
                     ?>
                     <a href="#fake">
                         <img alt="" class="rounded" src="<?php echo base_url(); ?>profil/<?php echo $foto ?>" alt="UNKNOWN" width="64px" height="64px">
@@ -72,18 +71,17 @@
             <!-- start perulangan php untuk post -->
             <?php
             rsort($posting);
-            foreach ($posting as $data) : 
+            foreach ($posting as $data) :
                 foreach ($akun as $user) :
-                    if ( $data['username'] == $user['username']){
-                        if ($user['fotoProfil'] == ""){
+                    if ($data['username'] == $user['username']) {
+                        if ($user['fotoProfil'] == "") {
                             $foto = "default.png";
-                        }
-                        else{
-                        $foto = $user['fotoProfil'];
+                        } else {
+                            $foto = $user['fotoProfil'];
                         }
                     }
                 endforeach
-            ?>
+                ?>
                 <div class="row mt-4">
                     <div class="col col-2">
                         <a href="#fake">
@@ -105,7 +103,9 @@
                         </div>
                         <div>
                             <p class=""><?= $data['caption']; ?></p>
-                            <small class="text-muted"><p><?= $data['tag']; ?></p></small>
+                            <small class="text-muted">
+                                <p><?= $data['tag']; ?></p>
+                            </small>
                         </div>
                         <div class="float-right">
                             <ul class="list-inline text-muted">
@@ -121,9 +121,9 @@
                                 <li class="list-inline-item mr-2">
                                     <ion-icon name="repeat"></ion-icon>
                                 </li>
-                                <?php 
-                                    if ($_SESSION['success'] == $data['username']){  ?>
-                                <!-- if post sendiri tombol edit delete, else post orang tombol love -->
+                                <?php
+                                if ($_SESSION['success'] == $data['username']) {  ?>
+                                    <!-- if post sendiri tombol edit delete, else post orang tombol love -->
                                     <li class="list-inline-item mr-2 dropup">
                                         <a class="dropdown-toggle text-muted" href="#" id="dropdownPost" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <ion-icon name="more"></ion-icon>
@@ -133,9 +133,9 @@
                                             <a class="dropdown-item" href="<?php echo base_url(); ?>primer/delete/<?php echo $data['idPosting'] ?>">Delete</a>
                                         </div>
                                     </li>
-                                <?php }else{ ?>
-                                    <li  class="list-inline-item mr-2"></li>
-                                        <ion-icon name="heart"></ion-icon>
+                                <?php } else { ?>
+                                    <li class="list-inline-item mr-2"></li>
+                                    <ion-icon name="heart"></ion-icon>
                                     </li>
                                 <?php } ?>
                             </ul>
@@ -154,27 +154,28 @@
             <div>
                 <ul class="list-group active" id="sidebar">
                     <!-- start perulangan Blog -->
-                    <?php 
-                        shuffle($akun);
-                        $id =0;
-                        foreach ($akun as $user) :
-                        if ($id<=3){
-                            if ($user['fotoProfil'] == ""){
+                    <?php
+                    shuffle($akun);
+                    $id = 0;
+                    foreach ($akun as $user) :
+                        if ($id <= 3) {
+                            if ($user['fotoProfil'] == "") {
                                 $pic = "default.png";
-                            }
-                            else{
+                            } else {
                                 $pic = $user['fotoProfil'];
                             }
-                    ?>
-                        <li class="list-group-item" style="background-color:transparent; border-right:0; border-left : 0; border-color: rgb(139, 153, 173)">
-                            <div class="d-flex">
-                                <img alt="" class="rounded" src="<?php echo base_url(); ?>profil/<?php echo $pic ?>" alt="UNKNOWN" width="45px" height="45px">
+                            ?>
+                            <li class="list-group-item" style="background-color:transparent; border-right:0; border-left : 0; border-color: rgb(139, 153, 173)">
+                                <div class="d-flex">
+                                    <img alt="" class="rounded" src="<?php echo base_url(); ?>profil/<?php echo $pic ?>" alt="UNKNOWN" width="45px" height="45px">
 
-                                <div class="ml-2">
-                                    <b><?= $user['username']; ?></b>
-                                    <p class="text-muted" style="margin-bottom : 0;"><small><?= $user['nama']; ?></small></p>
-                                </div>
-                    <?php }else{ break; } ?>
+                                    <div class="ml-2">
+                                        <b><?= $user['username']; ?></b>
+                                        <p class="text-muted" style="margin-bottom : 0;"><small><?= $user['nama']; ?></small></p>
+                                    </div>
+                                <?php } else {
+                                break;
+                            } ?>
                                 <div class="ml-auto mt-2">
                                     <a href="" class="text-muted" style="text-decoration:none;">
                                         <ion-icon name="add-circle" size="large"></ion-icon>
@@ -182,10 +183,11 @@
                                 </div>
                             </div>
                         </li>
-                    <?php $id++; endforeach ?>
+                        <?php $id++;
+                    endforeach ?>
                     <!-- end perulangan profil blog, max 4 Blog -->
 
-                <a href="#" class="mt-1" style="text-decoration: none"><small>Explore all of tumbler</small></a>
+                    <a href="#" class="mt-1" style="text-decoration: none"><small>Explore all of tumbler</small></a>
             </div>
 
             <div>

@@ -4,18 +4,17 @@
             <div class="row">
                 <div class="col col-2">
 
-                <?php  
+                    <?php
                     foreach ($akun as $user) :
-                        if ( $_SESSION['success'] == $user['username']){
-                            if ($user['fotoProfil'] == ""){
+                        if ($_SESSION['success'] == $user['username']) {
+                            if ($user['fotoProfil'] == "") {
                                 $foto = "default.png";
-                            }
-                            else{
+                            } else {
                                 $foto = $user['fotoProfil'];
                             }
                         }
-                        endforeach
-                ?>
+                    endforeach
+                    ?>
 
                     <a href="#fake">
                         <img alt="" class="rounded" src="<?php echo base_url(); ?>profil/<?php echo $foto ?>" alt="UNKNOWN" width="64px" height="64px">
@@ -71,89 +70,90 @@
             </div>
 
             <!-- start perulangan php untuk post -->
-            <?php 
+            <?php
             rsort($posting);
-            foreach ($posting as $data) : 
-                if ($data['username'] == $_SESSION['success']){
-            ?>
-                <div class="row mt-4">
-                    <div class="col col-2">
-                        <a href="#fake">
-                            <img alt="" class="rounded" src="<?php echo base_url(); ?>profil/<?php echo $foto ?>" alt="UNKNOWN" width="64px" height="64px">
-                        </a>
+            foreach ($posting as $data) :
+                if ($data['username'] == $_SESSION['success']) {
+                    ?>
+                    <div class="row mt-4">
+                        <div class="col col-2">
+                            <a href="#fake">
+                                <img alt="" class="rounded" src="<?php echo base_url(); ?>profil/<?php echo $foto ?>" alt="UNKNOWN" width="64px" height="64px">
+                            </a>
+                        </div>
+
+                        <div class="col rounded hvr-curl-top-right" style="background-color: white; color: black;">
+
+                            <div>
+                                <h6 class="mt-2"><?= $data['username']; ?></h6>
+                            </div>
+                            <div>
+                                <?php if ($data['postText'] != NULL) { ?>
+                                    <h1 class="mt-4"><?= $data['postText']; ?></h1>
+                                <?php } else { ?>
+                                    <img src="<?php echo base_url(); ?>post/<?= $data['postFoto']; ?>" alt="" width=100%>
+                                <?php } ?>
+                            </div>
+                            <div>
+                                <p><?= $data['caption']; ?></p>
+                                <small class="text-muted">
+                                    <p><?= $data['tag']; ?></p>
+                                </small>
+                            </div>
+                            <div class="float-right">
+                                <ul class="list-inline text-muted">
+                                    <li class="list-inline-item mr-2">
+                                        <ion-icon name="send"></ion-icon>
+                                    </li>
+                                    <li class="list-inline-item mr-2">
+                                        <!-- modal harus tetep open saat klik reply dan cuma ngehilang pas ngeclick outside -->
+                                        <a id="komen" class="text-muted" href="#" data-toggle="modal" data-target="#modalKomen">
+                                            <ion-icon name="text"></ion-icon>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item mr-2">
+                                        <ion-icon name="repeat"></ion-icon>
+                                    </li>
+                                    <!-- if post sendiri tombol edit delete, else post orang tombol love -->
+                                    <li class="list-inline-item mr-2 dropup">
+                                        <a class="dropdown-toggle text-muted" href="#" id="dropdownPost" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <ion-icon name="more"></ion-icon>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownPost">
+                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEditText<?= $data['idPosting']; ?>">Edit</a>
+                                            <a class="dropdown-item" href="<?php echo base_url(); ?>/primer/delete/<?php echo $data['idPosting']; ?>">Delete</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
                     </div>
-
-                    <div class="col rounded hvr-curl-top-right" style="background-color: white; color: black;">
-
-                        <div>
-                            <h6 class="mt-2"><?= $data['username']; ?></h6>
-                        </div>
-                        <div>
-                            <?php if ($data['postText'] != NULL) { ?>
-                                <h1 class="mt-4"><?= $data['postText']; ?></h1>
-                            <?php } else { ?>
-                                <img src="<?php echo base_url(); ?>post/<?= $data['postFoto']; ?>" alt="" width=100%>
-                            <?php } ?>
-                        </div>
-                        <div>
-                            <p><?= $data['caption']; ?></p>
-                            <small class="text-muted"><p><?= $data['tag']; ?></p></small>
-                        </div>
-                        <div class="float-right">
-                            <ul class="list-inline text-muted">
-                                <li class="list-inline-item mr-2">
-                                    <ion-icon name="send"></ion-icon>
-                                </li>
-                                <li class="list-inline-item mr-2">
-                                    <!-- modal harus tetep open saat klik reply dan cuma ngehilang pas ngeclick outside -->
-                                    <a id="komen" class="text-muted" href="#" data-toggle="modal" data-target="#modalKomen">
-                                        <ion-icon name="text"></ion-icon>
-                                    </a>
-                                </li>
-                                <li class="list-inline-item mr-2">
-                                    <ion-icon name="repeat"></ion-icon>
-                                </li>
-                                <!-- if post sendiri tombol edit delete, else post orang tombol love -->
-                                <li class="list-inline-item mr-2 dropup">
-                                    <a class="dropdown-toggle text-muted" href="#" id="dropdownPost" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <ion-icon name="more"></ion-icon>
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownPost">
-                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEditText<?= $data['idPosting']; ?>">Edit</a>
-                                        <a class="dropdown-item" href="<?php echo base_url(); ?>/primer/delete/<?php echo $data['idPosting']; ?>">Delete</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-            <?php 
-                }
-                endforeach 
-            ?>
+                <?php
+            }
+        endforeach
+        ?>
             <!-- end perulangan php -->
         </div>
 
         <!-- SIDE BAR -->
         <div class="col col-4 ml-3 mt-5">
             <div>
-                <?php  
-                    foreach ($akun as $user) :
-                        if ($_SESSION['success'] == $user['username']){
-                            $nama = $user['nama'];
-                        }
-                    endforeach
+                <?php
+                foreach ($akun as $user) :
+                    if ($_SESSION['success'] == $user['username']) {
+                        $nama = $user['nama'];
+                    }
+                endforeach
                 ?>
                 <a href="#" class="text-muted" style="text-decoration: none"><b>
-                    <?php 
+                        <?php
                         if (isset($_SESSION['success'])) {
                             echo $_SESSION['success'];
-                        }
-                        else{
+                        } else {
                             echo "GAGAL";
                         }
-                    ?> 
+                        ?>
                     </b></a>
                 <p><?php echo $nama; ?></p>
             </div>

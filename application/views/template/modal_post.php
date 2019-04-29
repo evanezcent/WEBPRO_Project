@@ -80,15 +80,7 @@
                         <input type="text" class="form-control" name="title" placeholder="Title" id="post" style="font-size:30px">
                         <textarea class="form-control" rows="5" name="caption" placeholder="Your text here"></textarea>
                         <input type="text" class="form-control" name="tag" placeholder="#tags" id="tag" style="font-size:13px">
-                        <input type="hidden" class="form-control" name="user" value="
-                        <?php 
-                            if (isset($_SESSION['success'])) {
-                                echo $_SESSION['success'];
-                            }
-                            else{
-                                echo "GAGAL";
-                            }
-                         ?>">
+                        <input type="hidden" class="form-control" name="user" value="<?php echo $_SESSION['success']; ?>">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -124,16 +116,16 @@
                     </div>
                 </div>
             </div>
-                <div class="modal-body form-group">
-                    <?php echo form_open_multipart('Primer/do_upload');?>
-                        <input type="file" name="file" style="color: black">
-                        <textarea class="form-control" rows="3" name="caption" placeholder="Your text here" style="width: 100%;">   </textarea>
-                        <input type="hidden" class="form-control" name="user" value="<?php echo $_SESSION['success']; ?>">
-                         <input type="text" class="form-control" name="tag" placeholder="#tags" id="tag" style="font-size:13px">
-                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <input type="submit" class="btn btn-primary" value="Post" >
-                    </form>
-                </div>
+            <div class="modal-body form-group">
+                <?php echo form_open_multipart('Primer/do_upload'); ?>
+                <input type="file" name="file" style="color: black">
+                <textarea class="form-control" rows="3" name="caption" placeholder="Your text here" style="width: 100%;">   </textarea>
+                <input type="hidden" class="form-control" name="user" value="<?php echo $_SESSION['success']; ?>">
+                <input type="text" class="form-control" name="tag" placeholder="#tags" id="tag" style="font-size:13px">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <input type="submit" class="btn btn-primary" value="Post">
+                </form>
+            </div>
         </div>
     </div>
 </div>
@@ -309,7 +301,7 @@
 </div>
 
 <!-- edit text modal -->
-<?php foreach($posting as $data) : ?>
+<?php foreach ($posting as $data) : ?>
     <div class="modal fade" id="modalEditText<?= $data['idPosting']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -334,19 +326,19 @@
                     </div>
                 </div>
                 <div class="modal-body">
-            <form action="<?php echo base_url(); ?>primer/update" method="post">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="title" name="post" value="<?= $data['postText']; ?>" style="font-size:30px">
-                        <textarea class="form-control" rows="5" placeholder="Your text here" name="caption"><?= $data['caption']; ?></textarea>
-                        <input type="text" class="form-control" placeholder="#tags" name="tag" style="font-size:13px">
-                        <input type="hidden" name="id" value="<?= $data['idPosting']; ?>">
-                    </div>
+                    <form action="<?php echo base_url(); ?>primer/update" method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="title" name="post" value="<?= $data['postText']; ?>" style="font-size:30px">
+                            <textarea class="form-control" rows="5" placeholder="Your text here" name="caption"><?= $data['caption']; ?></textarea>
+                            <input type="text" class="form-control" placeholder="#tags" name="tag" style="font-size:13px">
+                            <input type="hidden" name="id" value="<?= $data['idPosting']; ?>">
+                        </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Post</button>
                 </div>
-            </form>
+                </form>
             </div>
         </div>
     </div>
