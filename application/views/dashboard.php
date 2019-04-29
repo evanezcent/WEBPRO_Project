@@ -1,4 +1,4 @@
-<div class="container pl-5 mt-5">
+<div class="pl-5 mt-5">
     <div class="row ml-5">
         <div class="col col-7 mt-5">
             <div class="row">
@@ -96,16 +96,23 @@
                                 <li class="list-inline-item mr-2">
                                     <ion-icon name="repeat"></ion-icon>
                                 </li>
+                                <?php 
+                                    if ($_SESSION['success'] == $data['username']){  ?>
                                 <!-- if post sendiri tombol edit delete, else post orang tombol love -->
-                                <li class="list-inline-item mr-2 dropup">
-                                    <a class="dropdown-toggle text-muted" href="#" id="dropdownPost" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <ion-icon name="more"></ion-icon>
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownPost">
-                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEditText<?= $data['idPosting']; ?>">Edit</a>
-                                        <a class="dropdown-item" href="<?php echo base_url(); ?>primer/delete/<?php echo $data['idPosting'] ?>">Delete</a>
-                                    </div>
-                                </li>
+                                    <li class="list-inline-item mr-2 dropup">
+                                        <a class="dropdown-toggle text-muted" href="#" id="dropdownPost" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <ion-icon name="more"></ion-icon>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownPost">
+                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEditText<?= $data['idPosting']; ?>">Edit</a>
+                                            <a class="dropdown-item" href="<?php echo base_url(); ?>primer/delete/<?php echo $data['idPosting'] ?>">Delete</a>
+                                        </div>
+                                    </li>
+                                <?php }else{ ?>
+                                    <li  class="list-inline-item mr-2"></li>
+                                        <ion-icon name="heart"></ion-icon>
+                                    </li>
+                                <?php } ?>
                             </ul>
                         </div>
 

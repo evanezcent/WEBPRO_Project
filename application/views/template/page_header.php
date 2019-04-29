@@ -17,7 +17,10 @@
             background-color: #001935;
             color: whitesmoke;
         }
-
+        body .mt-5 .col-7 #formEdit {
+            background-color: white;
+            color: black;
+        }
         #sidebar>.list-group-item {
             padding: 0.4em 1em;
         }
@@ -44,7 +47,7 @@
     </style>
 </head>
 
-<body>
+<body class="container">
     <nav class="l-header fixed-top navbar navbar-expand-lg navbar-dark border border-white border-top-0 border-right-0 border-left-0 py-0" style="background-color : #001935;">
         <a class="navbar-brand" href="<?php echo base_url('Primer'); ?>">Pic - Q</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navTumblr" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -119,12 +122,12 @@
                                     <small>
                                         <a href="<?php echo base_url(); ?>primer/profil" style="color:black; text-decoration: none;"><b>
                                             <?php 
-                                            if (isset($_SESSION['success'])) {
-                                                echo $_SESSION['success'];
-                                            }
-                                            else{
-                                                echo "GAGAL";
-                                            }
+                                                if (isset($_SESSION['success'])) {
+                                                    echo $_SESSION['success'];
+                                                }
+                                                else{
+                                                    echo "GAGAL";
+                                                }
                                             ?> 
                                         </b></a><br>
                                         <?php  
@@ -141,7 +144,7 @@
                             <a class="dropdown-item" href="#"><small>Followers</small></a>
                             <a class="dropdown-item" href="#"><small>Activity</small></a>
                             <a class="dropdown-item" href="#"><small>Review flagged posts</small></a>
-                            <a class="dropdown-item" href="#"><small>Edit appearance</small></a>
+                            <a class="dropdown-item" href="<?php echo base_url(); ?>primer/apperance"><small>Edit appearance</small></a>
                         </div>
                     </li>
                     <li class="nav-item">

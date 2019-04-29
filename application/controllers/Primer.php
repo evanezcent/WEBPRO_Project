@@ -43,7 +43,8 @@ class Primer extends CI_Controller {
 
 	public function inbox()
 	{
-		$this->load->view('template/page_header');
+		$user['akun'] = $this->model_dashboard->loadUser();
+		$this->load->view('template/page_header',$user);
 		$this->load->view('inbox-PickQ');
 		$this->load->view('template/modal_post');
 		$this->load->view('template/modal_comment');
@@ -91,6 +92,7 @@ class Primer extends CI_Controller {
 		$this->model_post->insertText($data);
 		redirect('primer','refresh');
 	}
+	// menu explore
 	public function explorer()
 	{
 		$data['post'] = $this->model_dashboard->getAllPost();
@@ -98,6 +100,14 @@ class Primer extends CI_Controller {
 		$this->load->view('template/page_header',$user);
 		$this->load->view('explorer',$data);
 		$this->load->view('template/modal_comment');
+	}
+
+	// edit apperance
+	public function apperance()
+	{
+		$user['akun'] = $this->model_dashboard->loadUser();
+		$this->load->view('template/page_header',$user);
+		$this->load->view('apperance');
 	}
 
 	//Update one item

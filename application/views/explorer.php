@@ -105,64 +105,27 @@
 					<div>
 						<ul class="list-group borderless" id="sidebar">
 							<!-- start perulangan Blog -->
-							<li class="list-group-item" style="background-color:transparent; border-right:0; border-left : 0; border-color: rgb(139, 153, 173)">
-								<div class="d-flex">
-									<img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="45px" height="45px">
+					<?php 
+                        $id =0;
+                        foreach ($akun as $user) :
+                        if ($id<=3){
+                    ?>
+                        	<li class="list-group-item" style="background-color:transparent; border-right:0; border-left : 0; border-color: rgb(139, 153, 173)">
+                            	<div class="d-flex">
+                                	<img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="45px" height="45px">
 
-									<div class="ml-2">
-										<b>pratamays</b>
-										<p class="text-muted" style="margin-bottom : 0;"><small>Tama</small></p>
-									</div>
-
-									<div class="ml-auto mt-2">
+                                	<div class="ml-2">
+                                    	<b><?= $user['username']; ?></b>
+                                    	<p class="text-muted" style="margin-bottom : 0;"><small><?= $user['nama']; ?></small></p>
+                                	</div>
+                    <?php }else{ break; } ?>
+                                	<div class="ml-auto mt-2">
 										<a href="" class="nounderline">Follow</a>
 									</div>
-								</div>
-							</li>
+                            	</div>
+                        	</li>
+                    <?php $id++; endforeach ?>
 							<!-- end perulangan profil blog, max 4 Blog -->
-
-							<li class="list-group-item" style="background-color:transparent; border-right:0; border-left : 0; border-color: rgb(139, 153, 173)">
-								<div class="d-flex">
-									<img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="45px" height="45px">
-s
-									<div class="ml-2">
-										<b>pratamays</b>
-										<p class="text-muted" style="margin-bottom : 0;"><small>Tama</small></p>
-									</div>
-
-									<div class="ml-auto mt-2">
-										<a href="" class="nounderline">Follow</a>
-									</div>
-								</div>
-							</li>
-							<li class="list-group-item" style="background-color:transparent; border-right:0; border-left : 0; border-color: rgb(139, 153, 173)">
-								<div class="d-flex">
-									<img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="45px" height="45px">
-
-									<div class="ml-2">
-										<b>pratamays</b>
-										<p class="text-muted" style="margin-bottom : 0;"><small>Tama</small></p>
-									</div>
-
-									<div class="ml-auto mt-2">
-										<a href="" class="nounderline">Follow</a>
-									</div>
-								</div>
-							</li>
-							<li class="list-group-item" style="background-color:transparent; border-right:0; border-left : 0; border-color: rgb(139, 153, 173)">
-								<div class="d-flex">
-									<img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="45px" height="45px">
-
-									<div class="ml-2">
-										<b>pratamays</b>
-										<p class="text-muted" style="margin-bottom : 0;"><small>Tama</small></p>
-									</div>
-
-									<div class="ml-auto mt-2">
-										<a href="" class="nounderline">Follow</a>
-									</div>
-								</div>
-							</li>
 						</ul>
 
 						<a href="#" class="mt-1 ml-3 nounderline text-light" ><small>Show more goblogs</small></a>
