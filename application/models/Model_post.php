@@ -16,7 +16,7 @@ class Model_post extends CI_Model
   {
     $this->db->where('idPosting', $id);
     $data = array(
-      'postText' => $this->input->post('title'),
+      'postText' => $this->input->post('post'),
       'caption' => $this->input->post('caption'),
       'tag' => $this->input->post('tag')
     );

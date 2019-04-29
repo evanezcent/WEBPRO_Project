@@ -26,7 +26,12 @@ class Home extends CI_Controller {
 	//Login
 	public function userlogin()
 	{
-		$user = $this->model_user->findUser();
+		$data = array(
+            "username" => $this->input->post('your_name'),
+            "password" => $this->input->post('your_pass')
+        );
+
+		$user = $this->model_user->findUser($data);
 		if ($user != NULL){
 			$this->session->set_userdata('success', $user[0]['username']);
             redirect('Primer','refresh');
@@ -48,7 +53,7 @@ class Home extends CI_Controller {
 		$this->model_user->register($data);
 
 		// setelah register lanjut ke dashboard
-		$user = $this->model_user->findUser();
+		$user = $this->model_user->findUser($data);
 		if ($user != NULL){
 			$this->session->set_userdata('success', $user[0]['username']);
             redirect('Primer','refresh');
@@ -73,7 +78,6 @@ class Home extends CI_Controller {
   		$this->upload->do_upload('profil');
         $data = $this->upload->data();
         $file = $data['file_name'];
-  		echo $file;
 
   		$data = array(
 			'nama' => $this->input->post('nama'),

@@ -62,7 +62,6 @@ class Primer extends CI_Controller
 		$this->upload->do_upload('file');
 		$data = $this->upload->data();
 		$file = $data['file_name'];
-		echo $file;
 
 		$data = array(
 			'username' => $this->input->post('user'),
@@ -79,14 +78,12 @@ class Primer extends CI_Controller
 	//Upload post text
 	public function postText()
 	{
-
 		$data = array(
 			'username' => $this->input->post('user'),
 			'postText' => $this->input->post('title'),
 			'caption' => $this->input->post('caption'),
 			'tag' => '#' . $this->input->post('tag')
 		);
-
 		$this->model_post->insertText($data);
 		redirect('primer', 'refresh');
 	}
@@ -113,14 +110,14 @@ class Primer extends CI_Controller
 	{
 		$id = $this->input->post('id');
 		$this->model_post->updatePost($id);
-		redirect('primer/profil', 'refresh');
+		redirect('primer', 'refresh');
 	}
 
 	//Delete one item
 	public function delete($id)
 	{
 		$this->model_post->deletePost($id);
-		redirect('primer/profil', 'refresh');
+		redirect('primer', 'refresh');
 	}
 }
 

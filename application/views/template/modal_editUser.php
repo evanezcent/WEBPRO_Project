@@ -1,7 +1,18 @@
 <div class="modal fade" id="modalUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content bg-secondary">
-            <?php echo form_open_multipart('Home/do_upload');?>
+            <?php echo form_open_multipart('Home/do_upload');
+                foreach ($akun as $user):
+                    if ($_SESSION['success'] == $user['username']){
+                        if ($user['nama'] != NULL){
+                            $nama = $user['nama'];
+                        }else{
+                            $nama = "Title";
+                        }
+                        $foto = $user['fotoProfil'];
+                    }
+                endforeach
+            ?>
                 <div class="modal-body form-group">
 <!--                     <label><b>Change Background</b></label>
                     <input type="file" name="background" style="color: black">
@@ -10,7 +21,7 @@
                     <input type="file" name="profil" style="color: black">
                     <hr>
                     <label ><b>Full Name :</b></label>
-                    <input type="text" class="form-control" name="nama" placeholder="Title" id="post" style="font-size:20px">
+                    <input type="text" class="form-control" name="nama" value="<?php echo $nama; ?>" id="post" style="font-size:20px">
                     <hr>
                     <label ><b>Description :</b></label>
                     <textarea class="form-control" rows="3" name="bio" placeholder="Description" style="width: 100%;">   </textarea>
