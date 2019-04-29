@@ -17,7 +17,7 @@
                     <input type="hidden" class="form-control" name="user" value="<?php echo $_SESSION['success']; ?>">
                     <hr>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    <input type="submit" class="btn btn-primary" value="Post" >
+                    <input type="submit" class="btn btn-primary" value="Update" >
                 </div>
             </form>
         </div>

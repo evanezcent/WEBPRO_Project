@@ -71,7 +71,9 @@
             </div>
 
             <!-- start perulangan php untuk post -->
-            <?php foreach ($posting as $data) : 
+            <?php 
+            rsort($posting);
+            foreach ($posting as $data) : 
                 if ($data['username'] == $_SESSION['success']){
             ?>
                 <div class="row mt-4">

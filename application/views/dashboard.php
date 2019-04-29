@@ -70,7 +70,9 @@
             </div>
 
             <!-- start perulangan php untuk post -->
-            <?php foreach ($posting as $data) : 
+            <?php
+            rsort($posting);
+            foreach ($posting as $data) : 
                 foreach ($akun as $user) :
                     if ( $data['username'] == $user['username']){
                         if ($user['fotoProfil'] == ""){
@@ -153,6 +155,7 @@
                 <ul class="list-group active" id="sidebar">
                     <!-- start perulangan Blog -->
                     <?php 
+                        shuffle($akun);
                         $id =0;
                         foreach ($akun as $user) :
                         if ($id<=3){
@@ -190,7 +193,7 @@
             </div>
             <div class="d-flex ml-3">
                 <a href="#fake">
-                    <img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="45px" height="45px">
+                    <img alt="" class="rounded" src="<?php echo base_url(); ?>post/tempImage-min.jpg" alt="UNKNOWN" width="45px" height="45px">
                 </a>
                 <div class="ml-2">
                     <a href="#" style="color:white; text-decoration: none;"><b>pratamays</b></a><br>

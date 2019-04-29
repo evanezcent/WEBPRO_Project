@@ -166,7 +166,9 @@
 					</div>
 				</div>
 				<!-- Start Perulangan Explorer-->
-				<?php foreach ($post as $data) : 
+				<?php 
+				rsort($post);
+				foreach ($post as $data) : 
 					foreach ($akun as $user) :
                     if ( $data['username'] == $user['username']){
                         if ($user['fotoProfil'] == ""){
@@ -176,8 +178,9 @@
                         	$foto = $user['fotoProfil'];
                         }
                     }
-                endforeach
+                	endforeach
 				?>
+				<?php if ($data['postFoto'] != NULL) {?>
 				<div class="card mycard">
 					<div class="class-header p-3 border-bottom" style="height: 60px">
 						<div class=""container>
@@ -195,13 +198,9 @@
 						</div>
 					</div>
 <!--					card body-->
-					<?php if ($data['postText'] != NULL) { ?>
-					<div class="card-body">
-						<p class="card-text text-dark"><?= $data['postText']; ?></p>
-					</div>
-					<?php } else { ?>
-					<img src="<?php echo base_url(); ?>post/<?= $data['postFoto']; ?>" class="card-img" alt="...">
-					<?php } ?>
+					
+						<img src="<?php echo base_url(); ?>post/<?= $data['postFoto']; ?>" class="card-img" alt="...">
+					
 <!--					card footer-->
 					<div class="card-footer">
 						<div class="float-right">
@@ -225,6 +224,7 @@
 						</div>
 					</div>
 				</div>
+				<?php } ?>
 				<?php endforeach ?>
 				<!-- End Perulangan explorer-->
 				<!-- START DUMMY BUAT CONTOH-->
