@@ -23,6 +23,11 @@ class Model_user extends CI_Model {
     {
     	$this->db->insert('user', $data);
     }
+    public function editUser($data,$user)
+    {
+    	$this->db->where('username', $user);
+    	$this->db->update('user', $data);
+    }
 
 }
 

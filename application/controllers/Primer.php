@@ -108,6 +108,7 @@ class Primer extends CI_Controller {
 		$user['akun'] = $this->model_dashboard->loadUser();
 		$this->load->view('template/page_header',$user);
 		$this->load->view('apperance');
+		$this->load->view('template/modal_editUser');
 	}
 
 	//Update one item

@@ -58,7 +58,32 @@ class Home extends CI_Controller {
             redirect('Home','refresh');
 		}
 	}
-	//Delete one item
+	
+	public function do_upload()
+	{
+		$uname = $this->input->post('user');
+		$config['upload_path']          =  './profil/';
+        $config['allowed_types']        =  'gif|jpeg|jpg|png';
+        $config['max_size']             =  1000000000000;
+        $config['max_width']            =  5000;
+        $config['max_height']           =  5000;
+        
+  		$this->load->library('upload', $config);
+
+  		$this->upload->do_upload('profil');
+        $data = $this->upload->data();
+        $file = $data['file_name'];
+  		echo $file;
+
+  		$data = array(
+			'nama' => $this->input->post('nama'),
+			'bio' => $this->input->post('bio'),
+			'fotoProfil' => $file
+		);
+		$this->model_user->editUser($data,$uname);
+		redirect('primer/apperance','refresh');
+	}
+
 	public function logout()
 	{
 		session_destroy();

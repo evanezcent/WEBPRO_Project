@@ -45,6 +45,7 @@
             border: 0 !important;
         }
     </style>
+
 </head>
 
 <body class="container">
@@ -115,8 +116,20 @@
                             </div>
                             <div class="dropdown-divider"></div>
                             <div class="d-flex ml-3">
+                                <?php  
+                                    foreach ($akun as $user) :
+                                    if ( $_SESSION['success'] == $user['username']){
+                                        if ($user['fotoProfil'] == ""){
+                                            $foto = "default.png";
+                                        }
+                                        else{
+                                            $foto = $user['fotoProfil'];
+                                        }
+                                    }
+                                    endforeach
+                                ?>
                                 <a href="#fake">
-                                    <img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="30px" height="30px">
+                                    <img alt="" class="rounded" src="<?php echo base_url(); ?>profil/<?php echo $foto ?>" alt="UNKNOWN" width="30px" height="30px">
                                 </a>
                                 <div class="ml-2">
                                     <small>

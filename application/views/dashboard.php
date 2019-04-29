@@ -3,8 +3,20 @@
         <div class="col col-7 mt-5">
             <div class="row">
                 <div class="col col-2">
+                    <?php  
+                        foreach ($akun as $user) :
+                            if ( $_SESSION['success'] == $user['username']){
+                                if ($user['fotoProfil'] == ""){
+                                    $foto = "default.png";
+                                }
+                                else{
+                                    $foto = $user['fotoProfil'];
+                                }
+                            }
+                        endforeach
+                    ?>
                     <a href="#fake">
-                        <img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="64px" height="64px">
+                        <img alt="" class="rounded" src="<?php echo base_url(); ?>profil/<?php echo $foto ?>" alt="UNKNOWN" width="64px" height="64px">
                     </a>
                 </div>
 
@@ -58,11 +70,22 @@
             </div>
 
             <!-- start perulangan php untuk post -->
-            <?php foreach ($posting as $data) : ?>
+            <?php foreach ($posting as $data) : 
+                foreach ($akun as $user) :
+                    if ( $data['username'] == $user['username']){
+                        if ($user['fotoProfil'] == ""){
+                            $foto = "default.png";
+                        }
+                        else{
+                        $foto = $user['fotoProfil'];
+                        }
+                    }
+                endforeach
+            ?>
                 <div class="row mt-4">
                     <div class="col col-2">
                         <a href="#fake">
-                            <img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="64px" height="64px">
+                            <img alt="" class="rounded" src="<?php echo base_url(); ?>profil/<?php echo $foto ?>" alt="UNKNOWN" width="64px" height="64px">
                         </a>
                     </div>
 
@@ -133,10 +156,16 @@
                         $id =0;
                         foreach ($akun as $user) :
                         if ($id<=3){
+                            if ($user['fotoProfil'] == ""){
+                                $pic = "default.png";
+                            }
+                            else{
+                                $pic = $user['fotoProfil'];
+                            }
                     ?>
                         <li class="list-group-item" style="background-color:transparent; border-right:0; border-left : 0; border-color: rgb(139, 153, 173)">
                             <div class="d-flex">
-                                <img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="45px" height="45px">
+                                <img alt="" class="rounded" src="<?php echo base_url(); ?>profil/<?php echo $pic ?>" alt="UNKNOWN" width="45px" height="45px">
 
                                 <div class="ml-2">
                                     <b><?= $user['username']; ?></b>

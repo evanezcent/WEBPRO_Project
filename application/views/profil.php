@@ -3,8 +3,22 @@
         <div class="col col-7 mt-5">
             <div class="row">
                 <div class="col col-2">
+
+                <?php  
+                    foreach ($akun as $user) :
+                        if ( $_SESSION['success'] == $user['username']){
+                            if ($user['fotoProfil'] == ""){
+                                $foto = "default.png";
+                            }
+                            else{
+                                $foto = $user['fotoProfil'];
+                            }
+                        }
+                        endforeach
+                ?>
+
                     <a href="#fake">
-                        <img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="64px" height="64px">
+                        <img alt="" class="rounded" src="<?php echo base_url(); ?>profil/<?php echo $foto ?>" alt="UNKNOWN" width="64px" height="64px">
                     </a>
                 </div>
                 <div class="col rounded d-flex" style="background-color: white; color: black;">
@@ -63,7 +77,7 @@
                 <div class="row mt-4">
                     <div class="col col-2">
                         <a href="#fake">
-                            <img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="64px" height="64px">
+                            <img alt="" class="rounded" src="<?php echo base_url(); ?>profil/<?php echo $foto ?>" alt="UNKNOWN" width="64px" height="64px">
                         </a>
                     </div>
 
@@ -122,6 +136,13 @@
         <!-- SIDE BAR -->
         <div class="col col-4 ml-3 mt-5">
             <div>
+                <?php  
+                    foreach ($akun as $user) :
+                        if ($_SESSION['success'] == $user['username']){
+                            $nama = $user['nama'];
+                        }
+                    endforeach
+                ?>
                 <a href="#" class="text-muted" style="text-decoration: none"><b>
                     <?php 
                         if (isset($_SESSION['success'])) {
@@ -132,7 +153,7 @@
                         }
                     ?> 
                     </b></a>
-                <p>Tama</p>
+                <p><?php echo $nama; ?></p>
             </div>
 
             <div>
@@ -153,7 +174,7 @@
             </div>
             <div class="d-flex">
                 <a href="#fake">
-                    <img alt="" class="rounded" src="<?php echo base_url(); ?>assets/tempImage-min.jpg" alt="UNKNOWN" width="50px" height="50px">
+                    <img alt="" class="rounded" src="<?php echo base_url(); ?>profil/tempImage-min.jpg" alt="UNKNOWN" width="50px" height="50px">
                 </a>
                 <div class="ml-2">
                     <a href="#" style="color:white; text-decoration: none;"><b>pratamays</b></a><br>

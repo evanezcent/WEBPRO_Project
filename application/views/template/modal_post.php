@@ -128,10 +128,10 @@
                     <?php echo form_open_multipart('Primer/do_upload');?>
                         <input type="file" name="file" style="color: black">
                         <textarea class="form-control" rows="3" name="caption" placeholder="Your text here" style="width: 100%;">   </textarea>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <input type="submit" class="btn btn-primary" value="Post" >
                         <input type="hidden" class="form-control" name="user" value="<?php echo $_SESSION['success']; ?>">
                          <input type="text" class="form-control" name="tag" placeholder="#tags" id="tag" style="font-size:13px">
+                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-primary" value="Post" >
                     </form>
                 </div>
         </div>
