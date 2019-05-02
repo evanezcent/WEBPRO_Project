@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/hover.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/comment.css">
+    <title>Pic - Q</title>
     <style>
         body {
             background-color: #001935;
