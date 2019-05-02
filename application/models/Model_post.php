@@ -18,7 +18,7 @@ class Model_post extends CI_Model
     $data = array(
       'postText' => $this->input->post('post'),
       'caption' => $this->input->post('caption'),
-      'tag' => $this->input->post('tag')
+      'tag' => '#'.$this->input->post('tag')
     );
     $this->db->update('posting', $data);
   }

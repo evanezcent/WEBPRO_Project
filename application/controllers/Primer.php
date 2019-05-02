@@ -66,7 +66,7 @@ class Primer extends CI_Controller
 		$data = array(
 			'username' => $this->input->post('user'),
 			'caption' => $this->input->post('caption'),
-			'tag' => $this->input->post('tag'),
+			'tag' => '#' .$this->input->post('tag'),
 			'postFoto' => $file
 		);
 
