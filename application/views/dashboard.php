@@ -114,7 +114,7 @@
                                 </li>
                                 <li class="list-inline-item mr-2">
                                     <!-- modal harus tetep open saat klik reply dan cuma ngehilang pas ngeclick outside -->
-                                    <a id="komen" class="text-muted" href="#" data-toggle="modal" data-target="#modalKomen">
+                                    <a id="komen" data-id="<?= $data['idPosting']; ?>" class="text-muted" href="#" data-toggle="modal" data-target="#modalKomen">
                                         <ion-icon name="text"></ion-icon>
                                     </a>
                                 </li>

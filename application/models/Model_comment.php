@@ -1,12 +1,17 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Model_dashboard extends CI_Model
+class Model_comment extends CI_Model
 {
 
-    public function getCommentFromPost()
+    public function getCommentFromPost($id)
     {
-        $query = $this->db->get('posting');
+        $this->db->where('idPosting', $id);        
+        $query = $this->db->get('comment');
         return $query->result_array();
+    }
+    public function insertComment($data)
+    {
+        $this->db->insert('comment',$data);
     }
 }

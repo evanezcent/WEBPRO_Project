@@ -12,6 +12,7 @@ class Primer extends CI_Controller
 		$this->load->model('model_post');
 		$this->load->model('model_explorer');
 		$this->load->model('model_user');
+		$this->load->model('model_comment');
 	}
 
 	// List all your items
@@ -118,6 +119,23 @@ class Primer extends CI_Controller
 	{
 		$this->model_post->deletePost($id);
 		redirect('primer', 'refresh');
+	}
+
+	// Comment posting
+	public function comment()
+	{
+		$data = array(
+			'Komentar' => $this->input->post('comment'),
+			'idPosting' => $this->input->post('idPosting'),
+			'username' => $this->input->post('commentUser')
+		);
+		$perintah = $this->model_comment->insertComment($data);
+		json_encode($perintah);
+	}
+	public function getComment($id)
+	{
+		$data = $this->model_comment->getCommentFromPost($id);
+		json_encode($data);
 	}
 }
 
